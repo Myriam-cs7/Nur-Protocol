@@ -8,19 +8,47 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "Welcome to our store",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "",
             "letter_spacing": "normal",
-            "case": "none"
+            "case": "none",
+            "text": "Free Worldwide Shipping"
+          },
+          "blocks": {}
+        },
+        "announcement_nurTrial": {
+          "type": "_announcement",
+          "settings": {
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text": "30-Day Risk-Free Trial"
+          },
+          "blocks": {}
+        },
+        "announcement_nurSkincoach": {
+          "type": "_announcement",
+          "settings": {
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text": "Nur Skincoach Included — Your AI Skin Diagnostic"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announcement_BxgCk9",
+        "announcement_nurTrial",
+        "announcement_nurSkincoach"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
