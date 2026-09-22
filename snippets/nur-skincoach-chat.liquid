@@ -479,6 +479,15 @@
     other:        ['Personalised care',   'Skin balance',          'Targeted recovery']
   };
 
+  var concernLabels = {
+    wrinkles:     'Fine lines & wrinkles',
+    pigmentation: 'Pigmentation & dark spots',
+    acne:         'Acne & breakouts',
+    dullness:     'Dullness & fatigue',
+    sensitivity:  'Redness & sensitivity',
+    other:        'Something else'
+  };
+
   var steps = [
     {
       messages: [
@@ -735,7 +744,7 @@
     }, 950);
   }
 
-  window.nurOpenChat = function() {
+  window.nurOpenChat = function(preselectedConcern) {
     var overlay = document.getElementById('nurChatOverlay');
     overlay.classList.add('nur-chat-overlay--open');
     document.body.style.overflow = 'hidden';
@@ -745,7 +754,24 @@
     getOpts().innerHTML = '';
     document.getElementById('nurProgressFill').style.width = '0%';
     document.getElementById('nurProgressLabel').textContent = 'Step 1 of 4';
-    setTimeout(function() { runStep(0); }, 280);
+
+    if (preselectedConcern && priorityMap[preselectedConcern]) {
+      concern = preselectedConcern;
+      setTimeout(function() {
+        showTyping();
+        setTimeout(function() {
+          hideTyping();
+          appendNurMsg('Hello. I\'m Nur, your AI Skincoach.');
+          setTimeout(function() {
+            appendUserMsg(concernLabels[preselectedConcern]);
+            setProgress(25, 'Step 1 of 4');
+            setTimeout(function() { runStep(1); }, 460);
+          }, 550);
+        }, 750);
+      }, 280);
+    } else {
+      setTimeout(function() { runStep(0); }, 280);
+    }
   };
 
   window.nurCloseChat = function() {
