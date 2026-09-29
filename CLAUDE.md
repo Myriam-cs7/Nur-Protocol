@@ -4,14 +4,24 @@ AI LED face + neck mask, $499 bundle, differentiated by **Nur Skincoach** (an AI
 
 ## Deploying changes
 
+There is exactly **ONE** canonical draft/preview theme. Its Shopify theme ID is:
+
+```
+199272530304   (name in Shopify Admin: "Nur Protocol - Sync GitHub")
+```
+
 After editing files in this repo:
 
 ```
 git add -A && git commit -m "..." && git push
-shopify theme push --store=678kkd-ng.myshopify.com --unpublished --theme="Nur Protocol - <short description>"
+shopify theme push --store=678kkd-ng.myshopify.com --theme=199272530304
 ```
 
-This creates a new draft theme and prints a preview URL — share that URL directly in the response, don't just say "done." The user then manually publishes it from Shopify Admin (Online Store > Themes) once she approves the preview. Never publish automatically.
+**Never use `--unpublished --theme="<new name>"` again** — that flag combination always creates a brand-new theme, which is how we ended up with 5+ stray draft themes ("v2", "v3", "v4", "Live", "Updated copy of Horizon") cluttering Shopify Admin, none of them being the one actually iterated on. Always push to the fixed ID above so every change lands on the same preview theme.
+
+This prints a preview URL — share that URL directly in the response, don't just say "done." The user then manually publishes it from Shopify Admin (Online Store > Themes) once she approves the preview. Never publish automatically.
+
+If this theme ID is ever lost/deleted, list existing themes first (`shopify theme list --store=678kkd-ng.myshopify.com`) before creating a new one, and update this file with the new fixed ID immediately.
 
 ## Compliance rules — do not violate these
 
