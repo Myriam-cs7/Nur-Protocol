@@ -191,6 +191,30 @@
     max-width: calc(100% - 42px);
   }
 
+  .nur-chat-msg__bubble--cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nur-chat-inline-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #C8A96E;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    transition: background 0.25s ease;
+  }
+
+  .nur-chat-inline-cta:hover { background: #B89558; }
+
   .nur-chat-reply {
     display: flex; justify-content: flex-end;
     opacity: 0; animation: nur-msg-in 0.32s ease forwards;
@@ -343,27 +367,6 @@
     border-top: 1px solid rgba(255,255,255,0.07); padding-top: 14px;
   }
 
-  .nur-chat-cta-wrap {
-    display: flex; flex-direction: column; gap: 10px;
-  }
-
-  .nur-chat-cta {
-    display: block; width: 100%;
-    padding: 15px 20px; background: #C8A96E; color: #FFFFFF;
-    border: none; border-radius: 3px;
-    font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-    cursor: pointer; text-align: center; text-decoration: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    transition: background 0.3s ease;
-  }
-
-  .nur-chat-cta:hover { background: #B89558; color: #FFFFFF; }
-
-  .nur-chat-cta-note {
-    font-size: 11px; color: #A0A0A0;
-    text-align: center; letter-spacing: 0.2px; line-height: 1.65; margin: 0;
-  }
-
   .nur-chat-footer {
     padding: 9px 20px; background: #FFFFFF;
     border-top: 1px solid #F0EDE8;
@@ -431,7 +434,7 @@
 
 <button class="nur-skincoach-fab" onclick="nurOpenChat()" aria-label="Try the Nur Skincoach free preview">
   <span class="nur-skincoach-fab__dot"></span>
-  Nur Skincoach &mdash; Preview
+  Nur Skincoach Preview
 </button>
 
 <div class="nur-chat-overlay" id="nurChatOverlay" onclick="nurOverlayClick(event)">
@@ -725,19 +728,25 @@
           wrap.innerHTML =
             '<div class="nur-chat-result">' +
               '<span class="nur-chat-result__eyebrow">Your personalised routine</span>' +
-              '<p class="nur-chat-result__headline"><em>3 priorities.</em> Tailored to your skin.</p>' +
+              '<p class="nur-chat-result__headline"><em>3 priorities</em> tailored to your skin.</p>' +
               '<div class="nur-chat-result__priorities">' + prioritiesHtml + '</div>' +
-              '<p class="nur-chat-result__note">Your complete protocol — light wavelengths, session plan, and skincare sequence — is unlocked inside your Nur Protocol box.</p>' +
+              '<p class="nur-chat-result__note">Your complete protocol (light wavelengths, session plan, and skincare sequence) is unlocked inside your Nur Protocol box.</p>' +
             '</div>';
           getMsgs().appendChild(wrap);
           scrollBottom();
 
           setTimeout(function() {
-            getOpts().innerHTML =
-              '<div class="nur-chat-cta-wrap">' +
-                '<a href="/products/nur-protocol" class="nur-chat-cta">Discover Nur Protocol</a>' +
-                '<p class="nur-chat-cta-note">The full Nur Skincoach experience awaits in your box.</p>' +
+            getOpts().innerHTML = '';
+            var cta = document.createElement('div');
+            cta.className = 'nur-chat-msg';
+            cta.innerHTML =
+              '<div class="nur-chat-msg__avatar"></div>' +
+              '<div class="nur-chat-msg__bubble nur-chat-msg__bubble--cta">' +
+                'Your full protocol is part of every Nur Protocol box.' +
+                '<a href="/products/nur-protocol" class="nur-chat-inline-cta">Get My Protocol &rarr;</a>' +
               '</div>';
+            getMsgs().appendChild(cta);
+            scrollBottom();
           }, 700);
         }, 500);
       }, 600);
