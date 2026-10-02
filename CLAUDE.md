@@ -1,6 +1,6 @@
 # Nur Protocol — Shopify theme
 
-AI LED face + neck mask, $499 bundle, differentiated by **Nur Skincoach** (an AI skin diagnostic widget). Store: `678kkd-ng.myshopify.com` (domain nurprotocol.com). Theme: Horizon, Online Store 2.0.
+AI LED face + neck mask, $549 bundle, differentiated by **Nur Skincoach** (an AI skin diagnostic widget). Store: `678kkd-ng.myshopify.com` (domain nurprotocol.com). Theme: Horizon, Online Store 2.0.
 
 ## Deploying changes
 
@@ -42,7 +42,7 @@ Visual language established across all custom sections (in `templates/index.json
 - The Nur Skincoach chat widget lives in `snippets/nur-skincoach-chat.liquid`, rendered site-wide via `layout/theme.liquid`, with a floating "Ask Nur Skincoach" launcher button. `nurOpenChat(concernKey)` accepts an optional pre-selected concern (`wrinkles`, `pigmentation`, `acne`, `dullness`, `sensitivity`) to skip straight to step 2.
 - The Skincoach quiz is currently a scripted demo (hardcoded questions/results), not a real AI backend. Task #5/#6 in the roadmap: build a real backend (e.g. Cloudflare Worker) calling the Claude API, so the diagnostic becomes a genuine conversational agent.
 - Hero image is the shop file `NURP.Cover.png` (uploaded via Shopify Admin > Content > Files), referenced with `{{ 'NURP.Cover.png' | file_url }}` — shown uncropped, no text overlaid on it (the image already carries its own logo/copy).
-- Product: single bundle "Nur Protocol — AI LED Face & Neck Mask", handle `nur-protocol`, $499, status ACTIVE.
+- Product: single bundle "Nur Protocol — AI LED Face & Neck Mask", handle `nur-protocol`, $549, status ACTIVE.
 
 ## Remaining roadmap
 
