@@ -53,6 +53,13 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "custom_liquid_dubaiParis": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "<style>\n  .nur-footer-origin {\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 10px;\n    font-weight: 600;\n    letter-spacing: 3px;\n    text-transform: uppercase;\n    color: #C8A96E;\n    margin: 0 0 6px;\n  }\n</style>\n<p class=\"nur-footer-origin\">Dubai &middot; Paris<\/p>"
+              },
+              "blocks": {}
+            },
             "text_LWt8Pz": {
               "type": "text",
               "settings": {
@@ -105,6 +112,7 @@
             }
           },
           "block_order": [
+            "custom_liquid_dubaiParis",
             "text_LWt8Pz",
             "text_f9CFLH"
           ]
