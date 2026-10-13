@@ -56,7 +56,7 @@
             "custom_liquid_dubaiParis": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "<style>\n  .nur-footer-origin {\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 10px;\n    font-weight: 600;\n    letter-spacing: 3px;\n    text-transform: uppercase;\n    color: #C8A96E;\n    margin: 0 0 6px;\n  }\n</style>\n<p class=\"nur-footer-origin\">Dubai &middot; Paris<\/p>"
+                "custom_liquid": "<style>\n  .nur-footer-origin {\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 10px;\n    font-weight: 600;\n    letter-spacing: 3px;\n    text-transform: uppercase;\n    color: #C8A96E;\n    margin: 0 0 6px;\n  }\n</style>\n<p class=\"nur-footer-origin\">Dubai &middot; Paris</p>"
               },
               "blocks": {}
             },
@@ -109,12 +109,20 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "custom_liquid_followUs": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "<div class=\"nur-footer-follow\">\n  <span class=\"nur-footer-follow__label\">Follow Us</span>\n  <div class=\"nur-footer-follow__icons\">\n    <a href=\"https://www.instagram.com/nur_protocol/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"nur-footer-follow__icon\" aria-label=\"Instagram\">\n      <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\" focusable=\"false\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.23 3.492c-.84-.037-1.096-.046-3.23-.046-2.144 0-2.39.01-3.238.055-.776.027-1.195.164-1.487.273a2.43 2.43 0 0 0-.912.593 2.486 2.486 0 0 0-.602.922c-.11.282-.238.702-.274 1.486-.046.84-.046 1.095-.046 3.23 0 2.134.01 2.39.046 3.229.004.51.097 1.016.274 1.495.145.365.319.639.602.913.282.282.538.456.92.602.474.176.974.268 1.479.273.848.046 1.103.046 3.238.046 2.134 0 2.39-.01 3.23-.046.784-.036 1.203-.164 1.486-.273.374-.146.648-.329.921-.602.283-.283.447-.548.602-.922.177-.476.27-.979.274-1.486.037-.84.046-1.095.046-3.23 0-2.134-.01-2.39-.055-3.229-.027-.784-.164-1.204-.274-1.495a2.43 2.43 0 0 0-.593-.913 2.604 2.604 0 0 0-.92-.602c-.284-.11-.703-.237-1.488-.273ZM6.697 2.05c.857-.036 1.131-.045 3.302-.045 1.1-.014 2.202.001 3.302.045.664.014 1.321.14 1.943.374a3.968 3.968 0 0 1 1.414.922c.41.397.728.88.93 1.414.23.622.354 1.279.365 1.942C18 7.56 18 7.824 18 10.005c0 2.17-.01 2.444-.046 3.292-.036.858-.173 1.442-.374 1.943-.2.53-.474.976-.92 1.423a3.896 3.896 0 0 1-1.415.922c-.51.191-1.095.337-1.943.374-.857.036-1.122.045-3.302.045-2.171 0-2.445-.009-3.302-.055-.849-.027-1.432-.164-1.943-.364a4.152 4.152 0 0 1-1.414-.922 4.128 4.128 0 0 1-.93-1.423c-.183-.51-.329-1.085-.365-1.943C2.009 12.45 2 12.167 2 10.004c0-2.161 0-2.435.055-3.302.027-.848.164-1.432.365-1.942a4.44 4.44 0 0 1 .92-1.414 4.18 4.18 0 0 1 1.415-.93c.51-.183 1.094-.33 1.943-.366Zm.427 4.806a4.105 4.105 0 1 1 5.805 5.805 4.105 4.105 0 0 1-5.805-5.805Zm1.882 5.371a2.668 2.668 0 1 0 2.042-4.93 2.668 2.668 0 0 0-2.042 4.93Zm5.922-5.942a.958.958 0 1 1-1.355-1.355.958.958 0 0 1 1.355 1.355Z\" /></svg>\n    </a>\n    <a href=\"https://www.tiktok.com/@nurprotocol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"nur-footer-follow__icon\" aria-label=\"TikTok\">\n      <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M10.511 1.705h2.74s-.157 3.51 3.795 3.768v2.711s-2.114.129-3.796-1.158l.028 5.606A5.073 5.073 0 1 1 8.213 7.56h.708v2.785a2.298 2.298 0 1 0 1.618 2.205L10.51 1.705Z\" /></svg>\n    </a>\n  </div>\n</div>\n<style>\n  .nur-footer-follow {\n    margin-top: 22px;\n  }\n  .nur-footer-follow__label {\n    display: block;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 10px;\n    font-weight: 600;\n    letter-spacing: 3px;\n    text-transform: uppercase;\n    color: #C8A96E;\n    margin: 0 0 14px;\n  }\n  .nur-footer-follow__icons {\n    display: flex;\n    gap: 12px;\n  }\n  .nur-footer-follow__icon {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 38px;\n    height: 38px;\n    border-radius: 50%;\n    border: 1.5px solid rgba(26,26,26,0.2);\n    color: #1A1A1A;\n    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;\n  }\n  .nur-footer-follow__icon svg {\n    width: 16px;\n    height: 16px;\n    fill: currentColor;\n    display: block;\n  }\n  .nur-footer-follow__icon:hover {\n    background-color: #1A1A1A;\n    border-color: #1A1A1A;\n    color: #FFFFFF;\n  }\n</style>\n"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "custom_liquid_dubaiParis",
             "text_LWt8Pz",
-            "text_f9CFLH"
+            "text_f9CFLH",
+            "custom_liquid_followUs"
           ]
         },
         "email_signup_crihX7": {
@@ -175,31 +183,11 @@
             "case": "none"
           },
           "blocks": {}
-        },
-        "social_links_Ew63Kq": {
-          "type": "social-links",
-          "settings": {
-            "facebook_url": "",
-            "instagram_url": "https://www.instagram.com/nur_protocol/",
-            "youtube_url": "",
-            "tiktok_url": "https://www.tiktok.com/@nurprotocol",
-            "twitter_url": "",
-            "threads_url": "",
-            "linkedin_url": "",
-            "bluesky_url": "",
-            "snapchat_url": "",
-            "pinterest_url": "",
-            "tumblr_url": "",
-            "vimeo_url": "",
-            "custom_url": ""
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa",
-        "social_links_Ew63Kq"
+        "footer_policy_list_VCdnpa"
       ],
       "name": "t:names.utilities",
       "settings": {
