@@ -14,41 +14,13 @@
             "weight": "",
             "letter_spacing": "normal",
             "case": "none",
-            "text": "Worldwide Shipping"
-          },
-          "blocks": {}
-        },
-        "announcement_nurTrial": {
-          "type": "_announcement",
-          "settings": {
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text": "30-Day Risk-Free Trial"
-          },
-          "blocks": {}
-        },
-        "announcement_nurSkincoach": {
-          "type": "_announcement",
-          "settings": {
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text": "Nur Skincoach Included: Your AI Skin Diagnostic"
+            "text": "Dubai · Paris"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_BxgCk9",
-        "announcement_nurTrial",
-        "announcement_nurSkincoach"
+        "announcement_BxgCk9"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
