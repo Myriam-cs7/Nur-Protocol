@@ -768,7 +768,7 @@
     msg.className = 'nur-chat-msg';
     msg.innerHTML =
       '<div class="nur-chat-msg__avatar"></div>' +
-      '<div class="nur-chat-msg__bubble">Enter your email and get <strong>10% off</strong> your Nur Protocol.</div>';
+      '<div class="nur-chat-msg__bubble">Enter your email to get <strong>exclusive promotions</strong> on Nur Protocol.</div>';
     getMsgs().appendChild(msg);
     scrollBottom();
 
@@ -812,7 +812,7 @@
       showTyping();
       setTimeout(function() {
         hideTyping();
-        appendNurMsg('Thank you. Redirecting you with your 10% off applied...');
+        appendNurMsg('Thank you. Redirecting you to your Nur Protocol...');
         setTimeout(function() {
           window.location.href = '/discount/SKINCOACH10?redirect=/products/nur-protocol';
         }, 900);
