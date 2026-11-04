@@ -48,6 +48,6 @@ Visual language established across all custom sections (in `templates/index.json
 
 1. Real Nur Skincoach AI backend (Claude API via a serverless function, product recommendations)
 2. Legal pages (mentions légales, CGV, politique de confidentialité) — business is France-based (Aix-en-Provence), selling in USD to a US-first market
-3. Store is on Shopify's "Pause and Build" plan — must upgrade before checkout can work
+3. ~~Store is on Shopify's "Pause and Build" plan~~ — upgraded to **Basic** plan (confirmed via `shop.plan.publicDisplayName` on 2026-11-04). Checkout and real payments should now work; re-verify Shopify Payments / installment provider (Klarna, Shop Pay Installments) status before assuming it's still blocked.
 4. SEO, GA4/Meta pixel, remove storefront password before public launch
 5. Real before/after photos from early testers (the current section is an honest "coming soon" placeholder, never fill it with stock/fake images)
