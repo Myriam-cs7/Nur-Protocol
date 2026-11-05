@@ -366,6 +366,40 @@
 
 {% render 'buy-buttons-styles' %}
 
+{%- comment -%} display:contents on wrappers lets the Depo widget injected next to the button get its own full-width row {%- endcomment -%}
+<style>
+  .buy-buttons-block .product-form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row dense;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .buy-buttons-block .product-form-buttons > span:not([class]),
+  .buy-buttons-block .product-form-buttons add-to-cart-component {
+    display: contents;
+  }
+  .buy-buttons-block .product-form-buttons > *,
+  .buy-buttons-block .product-form-buttons > span:not([class]) > *,
+  .buy-buttons-block .product-form-buttons add-to-cart-component > * {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+  .buy-buttons-block .product-form-buttons .quantity-selector-wrapper {
+    justify-self: start;
+  }
+  .buy-buttons-block .product-form-buttons button[name='add'] {
+    grid-column: 1 / 2;
+    height: var(--height-buy-buttons);
+  }
+  .buy-buttons-block .product-form-buttons .accelerated-checkout-block {
+    grid-column: 2 / 3;
+  }
+  .buy-buttons-block .product-form-buttons .product-form-text__error.hidden {
+    display: none;
+  }
+</style>
+
 {% schema %}
 {
   "name": "t:names.product_buy_buttons",
