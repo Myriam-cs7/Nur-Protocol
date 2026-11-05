@@ -4,24 +4,36 @@ AI LED face + neck mask, $549 bundle, differentiated by **Nur Skincoach** (an AI
 
 ## Deploying changes
 
-There is exactly **ONE** canonical draft/preview theme. Its Shopify theme ID is:
+There are exactly **TWO** custom themes, and they swap roles every time one gets published:
 
 ```
-199272530304   (name in Shopify Admin: "Nur Protocol - Sync GitHub")
+199272530304   "Nur Protocol - Sync GitHub"
+201019752832   "Nur Protocol - Staging (founder photo update)"
 ```
 
-After editing files in this repo:
+Whichever one is **MAIN** (published) is what customers see. **The Shopify MCP tools refuse to write files to whichever theme has role MAIN** — you can only push to the other one (role UNPUBLISHED).
 
+**Before every push**, check which is which:
+```graphql
+query { themes(first: 10) { nodes { id name role } } }
 ```
-git add -A && git commit -m "..." && git push
-shopify theme push --store=678kkd-ng.myshopify.com --theme=199272530304
-```
+Push your file changes (via `themeFilesUpsert` with `body: {type: URL, value: "<raw GitHub URL>"}` — never inline large files, see "Pushing large files" below) to whichever theme is **UNPUBLISHED**. Then the user previews it and manually publishes it from Shopify Admin (Online Store > Themes > "..." > Publish) once she approves — this swaps the roles, and the theme you just pushed to becomes MAIN.
 
-**Never use `--unpublished --theme="<new name>"` again** — that flag combination always creates a brand-new theme, which is how we ended up with 5+ stray draft themes ("v2", "v3", "v4", "Live", "Updated copy of Horizon") cluttering Shopify Admin, none of them being the one actually iterated on. Always push to the fixed ID above so every change lands on the same preview theme.
+**Do not hardcode "always push to ID X"** — that assumption caused a real incident (2026-11-05) where code pushes kept landing on the no-longer-live theme for an extended period while a separate, unrelated theme was actually live, silently diverging for hours before being caught. Always re-check roles with the query above immediately before pushing, every single time.
 
-This prints a preview URL — share that URL directly in the response, don't just say "done." The user then manually publishes it from Shopify Admin (Online Store > Themes) once she approves the preview. Never publish automatically.
+**Never create a new theme** (`--unpublished --theme="<new name>"`, or any flow that creates a theme instead of using one of the two IDs above) — that's how we previously ended up with 5+ stray draft themes cluttering Shopify Admin. Only ever use the two fixed IDs above.
 
-If this theme ID is ever lost/deleted, list existing themes first (`shopify theme list --store=678kkd-ng.myshopify.com`) before creating a new one, and update this file with the new fixed ID immediately.
+Always share the preview URL in the response after pushing, don't just say "done." Never publish automatically — the user always does that herself after approving.
+
+If either theme ID is ever lost/deleted, list existing themes first (`themes(first: 10){nodes{id name role}}` via GraphQL) before creating a new one, and update this file with the new fixed ID immediately.
+
+### Pushing large files safely
+
+Never retype/inline large theme files by hand in a `themeFilesUpsert` mutation — this has caused silent content corruption twice (dropped repeated HTML blocks from LLM repetition-collapse). Always push via `body: {type: URL, value: "<raw.githubusercontent.com URL>"}` on the already-committed-and-pushed GitHub file, and verify the URL returns 200 via `curl` before calling the mutation. After pushing, always re-fetch the file from the theme and diff it against the local source before considering the push done.
+
+### Settings only editable live (app embeds, some block settings)
+
+Some things — app embed toggles (Theme Editor → App embeds), and some live-only settings — are **per-theme** and do **not** carry over automatically when you push code to the other theme or when a publish swap happens. After any publish, diff `config/settings_data.json`'s `current.blocks` between the two themes if an app integration seems to have silently stopped working; this is what happened with the Depo deposit app embed on 2026-11-05.
 
 ## Compliance rules — do not violate these
 
