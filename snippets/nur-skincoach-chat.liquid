@@ -1,3 +1,13 @@
+{%- liquid
+  assign nur_fr = false
+  if request.locale.iso_code == 'fr'
+    assign nur_fr = true
+  endif
+  assign nur_root = routes.root_url
+  if nur_root == '/'
+    assign nur_root = ''
+  endif
+-%}
 <!-- ============================================
      NUR PROTOCOL — NUR SKINCOACH CHAT WIDGET
      Rendered site-wide via layout/theme.liquid so the
@@ -439,10 +449,11 @@
   }
 </style>
 
-<button class="nur-skincoach-fab" onclick="nurOpenChat()" aria-label="Try the Nur Skincoach free preview">
+<button class="nur-skincoach-fab" onclick="nurOpenChat()" {% if nur_fr %}aria-label="Essayer l’aperçu gratuit de NŪR Skincoach"{% else %}aria-label="Try the NŪR Skincoach free preview"{% endif %}>
   <span class="nur-skincoach-fab__dot"></span>
-  NŪR Skincoach Preview
-</button>
+{% if nur_fr %}  Aperçu NŪR Skincoach
+{% else %}  NŪR Skincoach Preview
+{% endif %}</button>
 
 <div class="nur-chat-overlay" id="nurChatOverlay" onclick="nurOverlayClick(event)">
   <div class="nur-chat-modal">
@@ -451,14 +462,15 @@
       <div class="nur-chat-header__left">
         <div class="nur-chat-avatar--photo"></div>
         <div>
-          <div class="nur-chat-header__name">Nur Skincoach</div>
+          <div class="nur-chat-header__name">NŪR Skincoach</div>
           <div class="nur-chat-header__status">
             <div class="nur-chat-header__status-dot"></div>
-            Free Preview
-          </div>
+{% if nur_fr %}            Aperçu gratuit
+{% else %}            Free Preview
+{% endif %}          </div>
         </div>
       </div>
-      <button class="nur-chat-close" onclick="nurCloseChat()" aria-label="Close">
+      <button class="nur-chat-close" onclick="nurCloseChat()" {% if nur_fr %}aria-label="Fermer"{% else %}aria-label="Close"{% endif %}>
         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
@@ -467,12 +479,12 @@
       <div class="nur-chat-progress__bar">
         <div class="nur-chat-progress__fill" id="nurProgressFill"></div>
       </div>
-      <div class="nur-chat-progress__label" id="nurProgressLabel">Step 1 of 4</div>
+      <div class="nur-chat-progress__label" id="nurProgressLabel"{% if nur_fr %}>Étape 1 sur 4<{% else %}>Step 1 of 4<{% endif %}/div>
     </div>
 
     <div class="nur-chat-messages" id="nurChatMessages"></div>
     <div class="nur-chat-options"  id="nurChatOptions"></div>
-    <div class="nur-chat-footer">Dubai &middot; Paris</div>
+    <div class="nur-chat-footer"{% if nur_fr %}>Dubaï &middot; Paris<{% else %}>Dubai &middot; Paris<{% endif %}/div>
 
   </div>
 </div>
@@ -481,75 +493,75 @@
 (function() {
 
   var priorityMap = {
-    wrinkles:     ['Collagen renewal',    'Firmness & elasticity', 'Deep tissue recovery'],
-    pigmentation: ['Tone unification',    'Dark spot control',     'Radiance restoration'],
-    acne:         ['Bacterial clearance', 'Pore refinement',       'Inflammation control'],
-    dullness:     ['Cellular energising', 'Lymphatic activation',  'Luminosity boost'],
-    sensitivity:  ['Barrier repair',      'Redness reduction',     'Soothing response'],
-    other:        ['Personalised care',   'Skin balance',          'Targeted recovery']
+    wrinkles:     [{% if nur_fr %}'Renouvellement du collagène',{% else %}'Collagen renewal',{% endif %}    {% if nur_fr %}'Fermeté & élasticité',{% else %}'Firmness & elasticity',{% endif %} {% if nur_fr %}'Récupération en profondeur'{% else %}'Deep tissue recovery'{% endif %}],
+    pigmentation: [{% if nur_fr %}'Unification du teint',{% else %}'Tone unification',{% endif %}    {% if nur_fr %}'Contrôle des taches brunes',{% else %}'Dark spot control',{% endif %}     {% if nur_fr %}'Restauration de l’éclat'{% else %}'Radiance restoration'{% endif %}],
+    acne:         [{% if nur_fr %}'Purification bactérienne',{% else %}'Bacterial clearance',{% endif %} {% if nur_fr %}'Affinement des pores',{% else %}'Pore refinement',{% endif %}       {% if nur_fr %}'Contrôle de l’inflammation'{% else %}'Inflammation control'{% endif %}],
+    dullness:     [{% if nur_fr %}'Énergie cellulaire',{% else %}'Cellular energising',{% endif %} {% if nur_fr %}'Activation lymphatique',{% else %}'Lymphatic activation',{% endif %}  {% if nur_fr %}'Boost de luminosité'{% else %}'Luminosity boost'{% endif %}],
+    sensitivity:  [{% if nur_fr %}'Réparation de la barrière',{% else %}'Barrier repair',{% endif %}      {% if nur_fr %}'Réduction des rougeurs',{% else %}'Redness reduction',{% endif %}     {% if nur_fr %}'Effet apaisant'{% else %}'Soothing response'{% endif %}],
+    other:        [{% if nur_fr %}'Soin personnalisé',{% else %}'Personalised care',{% endif %}   {% if nur_fr %}'Équilibre de la peau',{% else %}'Skin balance',{% endif %}          {% if nur_fr %}'Récupération ciblée'{% else %}'Targeted recovery'{% endif %}]
   };
 
   var concernLabels = {
-    wrinkles:     'Fine lines & wrinkles',
-    pigmentation: 'Pigmentation & dark spots',
-    acne:         'Acne & breakouts',
-    dullness:     'Dullness & fatigue',
-    sensitivity:  'Redness & sensitivity',
-    other:        'Something else'
+    wrinkles:     {% if nur_fr %}'Ridules & rides'{% else %}'Fine lines & wrinkles'{% endif %},
+    pigmentation: {% if nur_fr %}'Pigmentation & taches brunes'{% else %}'Pigmentation & dark spots'{% endif %},
+    acne:         {% if nur_fr %}'Acné & imperfections'{% else %}'Acne & breakouts'{% endif %},
+    dullness:     {% if nur_fr %}'Teint terne & fatigue'{% else %}'Dullness & fatigue'{% endif %},
+    sensitivity:  {% if nur_fr %}'Rougeurs & sensibilité'{% else %}'Redness & sensitivity'{% endif %},
+    other:        {% if nur_fr %}'Autre chose'{% else %}'Something else'{% endif %}
   };
 
   var steps = [
     {
       messages: [
-        { text: 'Hello. I\'m NŪR, your AI Skincoach.',                                                      delay: 500 },
-        { text: 'I\'ll ask you 4 quick questions to build your personalised skin routine.',                  delay: 700 },
-        { text: 'What is your main skin concern right now?',                                                 delay: 600 }
+        { text: {% if nur_fr %}'Bonjour. Je suis NŪR, votre Skincoach IA.'{% else %}'Hello. I\'m NŪR, your AI Skincoach.'{% endif %},                                                      delay: 500 },
+        { text: {% if nur_fr %}'Je vais vous poser 4 questions rapides pour créer votre routine de soin personnalisée.'{% else %}'I\'ll ask you 4 quick questions to build your personalised skin routine.'{% endif %},                  delay: 700 },
+        { text: {% if nur_fr %}'Quelle est votre principale préoccupation de peau en ce moment&nbsp;?'{% else %}'What is your main skin concern right now?'{% endif %},                                                 delay: 600 }
       ],
       options: [
-        { label: 'Fine lines & wrinkles',     key: 'wrinkles'     },
-        { label: 'Pigmentation & dark spots', key: 'pigmentation' },
-        { label: 'Acne & breakouts',          key: 'acne'         },
-        { label: 'Dullness & fatigue',        key: 'dullness'     },
-        { label: 'Redness & sensitivity',     key: 'sensitivity'  },
-        { label: 'Other',                     key: 'other',      isOther: true, placeholder: 'Describe your skin concern...' }
+        { label: {% if nur_fr %}'Ridules & rides'{% else %}'Fine lines & wrinkles'{% endif %},     key: 'wrinkles'     },
+        { label: {% if nur_fr %}'Pigmentation & taches brunes'{% else %}'Pigmentation & dark spots'{% endif %}, key: 'pigmentation' },
+        { label: {% if nur_fr %}'Acné & imperfections'{% else %}'Acne & breakouts'{% endif %},          key: 'acne'         },
+        { label: {% if nur_fr %}'Teint terne & fatigue'{% else %}'Dullness & fatigue'{% endif %},        key: 'dullness'     },
+        { label: {% if nur_fr %}'Rougeurs & sensibilité'{% else %}'Redness & sensitivity'{% endif %},     key: 'sensitivity'  },
+        { label: {% if nur_fr %}'Autre'{% else %}'Other'{% endif %},                     key: 'other',      isOther: true, placeholder: {% if nur_fr %}'Décrivez votre préoccupation...'{% else %}'Describe your skin concern...'{% endif %} }
       ],
       progress: 25
     },
     {
       messages: [
-        { text: 'Understood. How would you describe your skin type?', delay: 500 }
+        { text: {% if nur_fr %}'Entendu. Comment décririez-vous votre type de peau&nbsp;?'{% else %}'Understood. How would you describe your skin type?'{% endif %}, delay: 500 }
       ],
       options: [
-        { label: 'Dry',                key: 'dry'        },
-        { label: 'Oily',               key: 'oily'       },
-        { label: 'Combination',        key: 'combo'      },
-        { label: 'Normal or balanced', key: 'normal'     },
-        { label: 'Sensitive',          key: 'sens'       },
-        { label: 'Other',              key: 'other_type', isOther: true, placeholder: 'Describe your skin type...' }
+        { label: {% if nur_fr %}'Sèche'{% else %}'Dry'{% endif %},                key: 'dry'        },
+        { label: {% if nur_fr %}'Grasse'{% else %}'Oily'{% endif %},               key: 'oily'       },
+        { label: {% if nur_fr %}'Mixte'{% else %}'Combination'{% endif %},        key: 'combo'      },
+        { label: {% if nur_fr %}'Normale ou équilibrée'{% else %}'Normal or balanced'{% endif %}, key: 'normal'     },
+        { label: {% if nur_fr %}'Sensible'{% else %}'Sensitive'{% endif %},          key: 'sens'       },
+        { label: {% if nur_fr %}'Autre'{% else %}'Other'{% endif %},              key: 'other_type', isOther: true, placeholder: {% if nur_fr %}'Décrivez votre type de peau...'{% else %}'Describe your skin type...'{% endif %} }
       ],
       progress: 50
     },
     {
       messages: [
-        { text: 'Have you used light therapy before?', delay: 500 }
+        { text: {% if nur_fr %}'Avez-vous déjà utilisé la luminothérapie&nbsp;?'{% else %}'Have you used light therapy before?'{% endif %}, delay: 500 }
       ],
       options: [
-        { label: 'No, this would be my first time',       key: 'first'     },
-        { label: 'Yes, occasionally at a clinic or spa',  key: 'clinic'    },
-        { label: 'Yes, I own a home device',              key: 'home'      },
-        { label: 'Other',                                 key: 'other_exp', isOther: true, placeholder: 'Tell me more...' }
+        { label: {% if nur_fr %}'Non, ce serait ma première fois'{% else %}'No, this would be my first time'{% endif %},       key: 'first'     },
+        { label: {% if nur_fr %}'Oui, de temps en temps en institut ou en spa'{% else %}'Yes, occasionally at a clinic or spa'{% endif %},  key: 'clinic'    },
+        { label: {% if nur_fr %}'Oui, j’ai un appareil à la maison'{% else %}'Yes, I own a home device'{% endif %},              key: 'home'      },
+        { label: {% if nur_fr %}'Autre'{% else %}'Other'{% endif %},                                 key: 'other_exp', isOther: true, placeholder: {% if nur_fr %}'Dites-m’en plus...'{% else %}'Tell me more...'{% endif %} }
       ],
       progress: 75
     },
     {
       messages: [
-        { text: 'Last question. What is your primary goal with NŪR Protocol?', delay: 500 }
+        { text: {% if nur_fr %}'Dernière question. Quel est votre objectif principal avec NŪR Protocol&nbsp;?'{% else %}'Last question. What is your primary goal with NŪR Protocol?'{% endif %}, delay: 500 }
       ],
       options: [
-        { label: 'Visible results as fast as possible', key: 'fast'      },
-        { label: 'A long-term anti-aging approach',     key: 'longterm'  },
-        { label: 'A ritual I will genuinely stick to',  key: 'ritual'    },
-        { label: 'Other',                               key: 'other_goal', isOther: true, placeholder: 'Share your goal...' }
+        { label: {% if nur_fr %}'Des résultats visibles le plus vite possible'{% else %}'Visible results as fast as possible'{% endif %}, key: 'fast'      },
+        { label: {% if nur_fr %}'Une approche anti-âge sur le long terme'{% else %}'A long-term anti-aging approach'{% endif %},     key: 'longterm'  },
+        { label: {% if nur_fr %}'Un rituel que je vais vraiment tenir'{% else %}'A ritual I will genuinely stick to'{% endif %},  key: 'ritual'    },
+        { label: {% if nur_fr %}'Autre'{% else %}'Other'{% endif %},                               key: 'other_goal', isOther: true, placeholder: {% if nur_fr %}'Partagez votre objectif...'{% else %}'Share your goal...'{% endif %} }
       ],
       progress: 100
     }
@@ -634,7 +646,7 @@
         btn.textContent = opt.label;
         btn.onclick = function() {
           if (opt.isOther) {
-            var ph = opt.placeholder || 'Your answer...';
+            var ph = opt.placeholder || {% if nur_fr %}'Votre réponse...'{% else %}'Your answer...'{% endif %};
             showOtherInput(ph, function(val) {
               onSelect({ label: val, key: opt.key, isOther: opt.isOther });
             });
@@ -654,7 +666,7 @@
       '<div class="nur-chat-input-wrap">' +
         '<input type="text" class="nur-chat-input" id="nurOtherInput"' +
           ' placeholder="' + placeholder + '" maxlength="140" autocomplete="off">' +
-        '<button class="nur-chat-input-send" id="nurOtherSend" aria-label="Send">' +
+        '<button class="nur-chat-input-send" id="nurOtherSend" {% if nur_fr %}aria-label="Envoyer"{% else %}aria-label="Send"{% endif %}>' +
           '<svg viewBox="0 0 24 24">' +
             '<line x1="22" y1="2" x2="11" y2="13"/>' +
             '<polygon points="22 2 15 22 11 13 2 9 22 2"/>' +
@@ -684,10 +696,10 @@
     var step    = steps[idx];
     var stepNum = idx + 1;
     getOpts().innerHTML = '';
-    setProgress(idx === 0 ? 5 : steps[idx - 1].progress, 'Step ' + stepNum + ' of 4');
+    setProgress(idx === 0 ? 5 : steps[idx - 1].progress, {% if nur_fr %}'Étape ' + stepNum + ' sur 4'{% else %}'Step ' + stepNum + ' of 4'{% endif %});
 
     playMessages(step.messages, function() {
-      setProgress(step.progress, 'Step ' + stepNum + ' of 4');
+      setProgress(step.progress, {% if nur_fr %}'Étape ' + stepNum + ' sur 4'{% else %}'Step ' + stepNum + ' of 4'{% endif %});
       renderOptions(step.options, function(opt) {
         if (idx === 0) concern = opt.key;
         getOpts().innerHTML = '';
@@ -702,7 +714,7 @@
   }
 
   function showResult() {
-    setProgress(100, 'Routine ready');
+    setProgress(100, {% if nur_fr %}'Routine prête'{% else %}'Routine ready'{% endif %});
     var priorities = priorityMap[concern] || priorityMap.other;
 
     var lockSvg =
@@ -724,20 +736,20 @@
     showTyping();
     setTimeout(function() {
       hideTyping();
-      appendNurMsg('Your skin routine is ready.');
+      appendNurMsg({% if nur_fr %}'Votre routine de soin est prête.'{% else %}'Your skin routine is ready.'{% endif %});
 
       setTimeout(function() {
-        appendNurMsg('NŪR has identified <strong>3 priorities</strong> for your skin.');
+        appendNurMsg({% if nur_fr %}'NŪR a identifié <strong>3 priorités</strong> pour votre peau.'{% else %}'NŪR has identified <strong>3 priorities</strong> for your skin.'{% endif %});
 
         setTimeout(function() {
           var wrap = document.createElement('div');
           wrap.className = 'nur-chat-result-wrap';
           wrap.innerHTML =
             '<div class="nur-chat-result">' +
-              '<span class="nur-chat-result__eyebrow">Your personalised routine</span>' +
-              '<p class="nur-chat-result__headline"><em>3 priorities</em> tailored to your skin.</p>' +
+              '<span class="nur-chat-result__eyebrow"{% if nur_fr %}>Votre routine personnalisée<{% else %}>Your personalised routine<{% endif %}/span>' +
+              '<p class="nur-chat-result__headline"{% if nur_fr %}><em>3 priorités</em> adaptées à votre peau.<{% else %}><em>3 priorities</em> tailored to your skin.<{% endif %}/p>' +
               '<div class="nur-chat-result__priorities">' + prioritiesHtml + '</div>' +
-              '<p class="nur-chat-result__note">Your complete protocol (light wavelengths, session plan, and skincare sequence) is unlocked inside your Nur Protocol box.</p>' +
+              '<p class="nur-chat-result__note"{% if nur_fr %}>Votre protocole complet (longueurs d’onde, plan de séances et ordre des soins) se débloque dans votre coffret NŪR Protocol.<{% else %}>Your complete protocol (light wavelengths, session plan, and skincare sequence) is unlocked inside your NŪR Protocol box.<{% endif %}/p>' +
             '</div>';
           getMsgs().appendChild(wrap);
           scrollBottom();
@@ -749,8 +761,8 @@
             cta.innerHTML =
               '<div class="nur-chat-msg__avatar"></div>' +
               '<div class="nur-chat-msg__bubble nur-chat-msg__bubble--cta">' +
-                'Your full protocol is part of every NŪR Protocol box.' +
-                '<button type="button" class="nur-chat-inline-cta" onclick="nurShowEmailGate()">Get My Protocol &rarr;</button>' +
+                {% if nur_fr %}'Votre protocole complet est inclus dans chaque coffret NŪR Protocol.'{% else %}'Your full protocol is part of every NŪR Protocol box.'{% endif %} +
+                '<button type="button" class="nur-chat-inline-cta" onclick="nurShowEmailGate()"{% if nur_fr %}>Obtenir mon protocole &rarr;<{% else %}>Get My Protocol &rarr;<{% endif %}/button>' +
               '</div>';
             getMsgs().appendChild(cta);
             scrollBottom();
@@ -768,7 +780,7 @@
     msg.className = 'nur-chat-msg';
     msg.innerHTML =
       '<div class="nur-chat-msg__avatar"></div>' +
-      '<div class="nur-chat-msg__bubble">Enter your email to get <strong>exclusive promotions</strong> on Nur Protocol.</div>';
+      '<div class="nur-chat-msg__bubble"{% if nur_fr %}>Entrez votre e-mail pour recevoir des <strong>offres exclusives</strong> sur NŪR Protocol.<{% else %}>Enter your email to get <strong>exclusive promotions</strong> on NŪR Protocol.<{% endif %}/div>';
     getMsgs().appendChild(msg);
     scrollBottom();
 
@@ -776,8 +788,8 @@
     o.innerHTML =
       '<div class="nur-chat-input-wrap">' +
         '<input type="email" class="nur-chat-input" id="nurEmailGateInput"' +
-          ' placeholder="Your email address" autocomplete="email" required>' +
-        '<button class="nur-chat-input-send" id="nurEmailGateSend" aria-label="Get my 10% off">' +
+          ' {% if nur_fr %}placeholder="Votre adresse e-mail"{% else %}placeholder="Your email address"{% endif %} autocomplete="email" required>' +
+        '<button class="nur-chat-input-send" id="nurEmailGateSend" {% if nur_fr %}aria-label="Obtenir mes 10 % de réduction"{% else %}aria-label="Get my 10% off"{% endif %}>' +
           '<svg viewBox="0 0 24 24">' +
             '<line x1="22" y1="2" x2="11" y2="13"/>' +
             '<polygon points="22 2 15 22 11 13 2 9 22 2"/>' +
@@ -812,9 +824,9 @@
       showTyping();
       setTimeout(function() {
         hideTyping();
-        appendNurMsg('Thank you. Redirecting you to your NŪR Protocol...');
+        appendNurMsg({% if nur_fr %}'Merci. Redirection vers votre NŪR Protocol...'{% else %}'Thank you. Redirecting you to your NŪR Protocol...'{% endif %});
         setTimeout(function() {
-          window.location.href = '/discount/SKINCOACH10?redirect=/products/nur-protocol';
+          window.location.href = '/discount/SKINCOACH10?redirect={{ nur_root }}/products/nur-protocol';
         }, 900);
       }, 750);
     }, 300);
@@ -829,7 +841,7 @@
     getMsgs().innerHTML = '';
     getOpts().innerHTML = '';
     document.getElementById('nurProgressFill').style.width = '0%';
-    document.getElementById('nurProgressLabel').textContent = 'Step 1 of 4';
+    document.getElementById('nurProgressLabel').textContent = {% if nur_fr %}'Étape 1 sur 4'{% else %}'Step 1 of 4'{% endif %};
 
     if (preselectedConcern && priorityMap[preselectedConcern]) {
       concern = preselectedConcern;
@@ -837,10 +849,10 @@
         showTyping();
         setTimeout(function() {
           hideTyping();
-          appendNurMsg('Hello. I\'m NŪR, your AI Skincoach.');
+          appendNurMsg({% if nur_fr %}'Bonjour. Je suis NŪR, votre Skincoach IA.'{% else %}'Hello. I\'m NŪR, your AI Skincoach.'{% endif %});
           setTimeout(function() {
             appendUserMsg(concernLabels[preselectedConcern]);
-            setProgress(25, 'Step 1 of 4');
+            setProgress(25, {% if nur_fr %}'Étape 1 sur 4'{% else %}'Step 1 of 4'{% endif %});
             setTimeout(function() { runStep(1); }, 460);
           }, 550);
         }, 750);
