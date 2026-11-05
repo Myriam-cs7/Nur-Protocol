@@ -41,6 +41,8 @@ Some things — app embed toggles (Theme Editor → App embeds), and some live-o
 
 **Google Search Console** is verified (2026-11-05, URL-prefix property `https://nurprotocol.com`) by the `google-site-verification` meta tag in `layout/theme.liquid`. Both themes carry it; never remove it, or the property loses verification. Homepage SEO title/description live in Online Store → Preferences (shop translatable resource keys `meta_title`/`meta_description`, French registered via `translationsRegister`), not in shop metafields.
 
+**Markets / pricing (2026-11-05):** shop currency is USD ($549). The market formerly called "France" (handle `fr`, id 109267812736) was renamed **"Europe"** and now holds FR + the other 26 EU countries + CH, GB, NO, with a fixed EUR price list of **€549** and local currencies off (everyone there pays in EUR). Before this, those countries weren't in any market, and Google picked up a converted €501.94. Shipping: France has its own zone, the rest of the EU is €22 "Standard International", and CH/GB/NO are in the free-express "International" zone.
+
 ## Compliance rules — do not violate these
 
 The original copy-pasted theme code contained fabricated/unsubstantiated claims (FDA-Cleared, Dermatologist Approved, Clinical-Grade, specific % results, a fake testimonial). These have been removed. Rules going forward:
