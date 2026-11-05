@@ -37,6 +37,8 @@ Never retype/inline large theme files by hand in a `themeFilesUpsert` mutation �
 
 Some things — app embed toggles (Theme Editor → App embeds), and some live-only settings — are **per-theme** and do **not** carry over automatically when you push code to the other theme or when a publish swap happens. After any publish, diff `config/settings_data.json`'s `current.blocks` between the two themes if an app integration seems to have silently stopped working; this is what happened with the Depo deposit app embed on 2026-11-05.
 
+**French translations of theme text are per-theme too.** French was added 2026-11-05 (Translate & Adapt auto-translate, run on theme 201019752832). Product/page/policy translations are shop-level and survive a publish swap, but translations of theme text (template block settings, e.g. the product page "EARLY ACCESS" line) are stored on one theme only. After a publish swap, re-run Translate & Adapt → French on the newly live theme, then re-apply manual fixes: "EARLY ACCESS" must stay in English on the French site (French line: `<p><strong>EARLY ACCESS</strong> — Réservez dès maintenant votre masque intelligent.</p>`), and the brand stays "Nūr Protocol" (auto-translate turns it into "Protocole Nūr"). Hand-coded `custom-liquid` text (e.g. the Klarna line) isn't translatable there — it switches language itself via `request.locale.iso_code`.
+
 ## Compliance rules — do not violate these
 
 The original copy-pasted theme code contained fabricated/unsubstantiated claims (FDA-Cleared, Dermatologist Approved, Clinical-Grade, specific % results, a fake testimonial). These have been removed. Rules going forward:
