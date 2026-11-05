@@ -8,6 +8,14 @@
   section: section
 %}
 
+{%- comment -%} Fixed ratio without cropping: infographic slides carry text that cover-fit would cut {%- endcomment -%}
+<style>
+  media-gallery .media-fit-cover :is(img, .deferred-media__poster-image) {
+    object-fit: contain;
+    background-color: var(--color-background);
+  }
+</style>
+
 {% # theme-check-disable ValidVisibleIf %}
 {% schema %}
 {
