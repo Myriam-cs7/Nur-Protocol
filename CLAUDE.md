@@ -43,6 +43,8 @@ Some things — app embed toggles (Theme Editor → App embeds), and some live-o
 
 **Markets / pricing (2026-11-05):** shop currency is USD ($549). The market formerly called "France" (handle `fr`, id 109267812736) was renamed **"Europe"** and now holds FR + the other 26 EU countries + CH, GB, NO, with a fixed EUR price list of **€549** and local currencies off (everyone there pays in EUR). Before this, those countries weren't in any market, and Google picked up a converted €501.94. Shipping: France has its own zone, the rest of the EU is €22 "Standard International", and CH/GB/NO are in the free-express "International" zone.
 
+**Depo deposit plan (2026-11-05):** Selling plan `gid://shopify/SellingPlan/739236544896`, group `126467637632`. It's a **20% deposit** (PERCENTAGE); the balance is charged 21 days after checkout. Don't use a fixed amount: a fixed deposit is in shop currency (USD), so EUR customers were charged €91.43 instead of €100. When Depo saves, it writes the name of whichever language was saved last into the Shopify plan name, so always save **English last** ("20% Deposit"). Then re-register the French name "Acompte de 20%" with `translationsRegister` (new digest), because the checkout uses Shopify's translation. The widget labels ("Paiement intégral", the remaining-balance text) live in Depo's own widget translations.
+
 ## Compliance rules — do not violate these
 
 The original copy-pasted theme code contained fabricated/unsubstantiated claims (FDA-Cleared, Dermatologist Approved, Clinical-Grade, specific % results, a fake testimonial). These have been removed. Rules going forward:
