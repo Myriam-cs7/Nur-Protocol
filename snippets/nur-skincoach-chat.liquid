@@ -441,7 +441,7 @@
 
 <button class="nur-skincoach-fab" onclick="nurOpenChat()" aria-label="Try the Nur Skincoach free preview">
   <span class="nur-skincoach-fab__dot"></span>
-  Nur Skincoach Preview
+  NŪR Skincoach Preview
 </button>
 
 <div class="nur-chat-overlay" id="nurChatOverlay" onclick="nurOverlayClick(event)">
@@ -501,7 +501,7 @@
   var steps = [
     {
       messages: [
-        { text: 'Hello. I\'m Nur, your AI Skincoach.',                                                      delay: 500 },
+        { text: 'Hello. I\'m NŪR, your AI Skincoach.',                                                      delay: 500 },
         { text: 'I\'ll ask you 4 quick questions to build your personalised skin routine.',                  delay: 700 },
         { text: 'What is your main skin concern right now?',                                                 delay: 600 }
       ],
@@ -543,7 +543,7 @@
     },
     {
       messages: [
-        { text: 'Last question. What is your primary goal with Nur Protocol?', delay: 500 }
+        { text: 'Last question. What is your primary goal with NŪR Protocol?', delay: 500 }
       ],
       options: [
         { label: 'Visible results as fast as possible', key: 'fast'      },
@@ -727,7 +727,7 @@
       appendNurMsg('Your skin routine is ready.');
 
       setTimeout(function() {
-        appendNurMsg('Nur has identified <strong>3 priorities</strong> for your skin.');
+        appendNurMsg('NŪR has identified <strong>3 priorities</strong> for your skin.');
 
         setTimeout(function() {
           var wrap = document.createElement('div');
@@ -749,7 +749,7 @@
             cta.innerHTML =
               '<div class="nur-chat-msg__avatar"></div>' +
               '<div class="nur-chat-msg__bubble nur-chat-msg__bubble--cta">' +
-                'Your full protocol is part of every Nur Protocol box.' +
+                'Your full protocol is part of every NŪR Protocol box.' +
                 '<button type="button" class="nur-chat-inline-cta" onclick="nurShowEmailGate()">Get My Protocol &rarr;</button>' +
               '</div>';
             getMsgs().appendChild(cta);
@@ -812,7 +812,7 @@
       showTyping();
       setTimeout(function() {
         hideTyping();
-        appendNurMsg('Thank you. Redirecting you to your Nur Protocol...');
+        appendNurMsg('Thank you. Redirecting you to your NŪR Protocol...');
         setTimeout(function() {
           window.location.href = '/discount/SKINCOACH10?redirect=/products/nur-protocol';
         }, 900);
@@ -837,7 +837,7 @@
         showTyping();
         setTimeout(function() {
           hideTyping();
-          appendNurMsg('Hello. I\'m Nur, your AI Skincoach.');
+          appendNurMsg('Hello. I\'m NŪR, your AI Skincoach.');
           setTimeout(function() {
             appendUserMsg(concernLabels[preselectedConcern]);
             setProgress(25, 'Step 1 of 4');
