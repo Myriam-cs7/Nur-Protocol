@@ -48,6 +48,10 @@ The original copy-pasted theme code contained fabricated/unsubstantiated claims 
 - **The Institut Ambre Oriental partnership and testimonial are real and confirmed by the user** — safe to keep, but keep the visual treatment consistent with the rest of the page (centered testimonial, not a full-bleed photo split).
 - When in doubt about a claim, ask the user before adding it back.
 
+## Brand spelling
+
+Write the brand **NŪR Protocol** and **NŪR Skincoach** (capital NŪR with the macron, matching the logo) in all customer-facing copy, in every language. Never translate the brand ("Protocole NŪR" is wrong). As of 2026-11-05 the product page (title, description, SEO description, FR translations) uses it; the homepage, About page and image alt texts still say "Nur" and haven't been switched yet.
+
 ## Design system
 
 Visual language established across all custom sections (in `templates/index.json`, `snippets/nur-skincoach-chat.liquid`): gold accent `#C8A96E`, near-black `#1A1A1A`, cream background `#FAFAF8`, white `#FFFFFF`, font stack `'Helvetica Neue', Helvetica, Arial, sans-serif`, generous whitespace, thin gold dividers, eyebrow labels in uppercase letter-spaced text. Match this for any new section rather than introducing a new style.
