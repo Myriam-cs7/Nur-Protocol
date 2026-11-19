@@ -813,8 +813,10 @@
     getOpts().innerHTML = '';
     appendUserMsg(email);
 
-    var body = 'form_type=customer&utf8=%E2%9C%93&contact%5Bemail%5D=' + encodeURIComponent(email) + '&contact%5Btags%5D=skincoach';
-    fetch(window.location.pathname, {
+    // Shopify only accepts the 'customer' (newsletter) form on /contact.
+    // The 'newsletter' tag subscribes the visitor to email marketing.
+    var body = 'form_type=customer&utf8=%E2%9C%93&contact%5Bemail%5D=' + encodeURIComponent(email) + '&contact%5Btags%5D=' + encodeURIComponent('newsletter,skincoach');
+    fetch('{{ nur_root }}/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body
