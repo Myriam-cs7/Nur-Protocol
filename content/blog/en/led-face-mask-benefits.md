@@ -62,7 +62,7 @@ Most masks, ours included, offer seven colours. They do not all stand on the sam
 | Light | Where the published research stands |
 |---|---|
 | **Red (around 630–660 nm)** | The most studied range for fine lines, texture and skin quality, alone or with near-infrared. |
-| **Near-infrared (around 830–850 nm)** | Studied mostly with red light. Not visible, so check the specification sheet rather than the glow. NŪR Protocol does not use near-infrared: its seven settings are visible light. |
+| **Near-infrared (around 830–850 nm)** | Studied mostly with red light. Not visible, so check the specification sheet rather than the glow. |
 | **Blue (around 415–450 nm)** | Studied for acne-prone skin, often combined with red. Evidence is mixed in quality. |
 | **Yellow, green, cyan, white** | Widely marketed, with far fewer clinical studies. Treat them as routine options, not as proven treatments. |
 
@@ -159,4 +159,4 @@ No. Trials used fixed frequencies, usually two to five sessions a week, and the 
 - **No percentages** from the studies are quoted, on purpose, so that no figure can be read as a claim about NŪR Protocol.
 - **Wording** follows the project rule: the skin assessment gives the personalised routine; the selfie is optional.
 - **Contraindications** come from the user manual (page 5); 3–5 sessions a week in 4-week cycles from the manual too; about 10 minutes per session confirmed by the user.
-- **Near-infrared:** absent from NŪR Protocol (supplier sheet, 21/11/2026), stated plainly in the table.
+- **Near-infrared:** the table describes the research only; the user chose not to mention that NŪR Protocol has none. Never imply that it does.

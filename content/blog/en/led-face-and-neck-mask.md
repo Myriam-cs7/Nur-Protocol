@@ -18,7 +18,7 @@ Most LED masks stop at the jawline. The neck and the décolleté, which see as m
 
 A face mask is shaped around the eyes, nose and mouth. Its lower edge follows the jaw. Below it, the front of the neck and the décolleté receive no light at all, whatever the programme.
 
-That matters for one simple reason: the neck is often the first area people notice and the last one their skincare routine reaches. Creams applied to the face often stop at the jaw too. Dermatology texts describe neck skin as thinner than facial skin, with fewer oil glands, which is one reason it is usually treated gently.
+Yet the neck gives away the passing years as much as the face, sometimes more. It is often the first area people notice and the last one their skincare routine reaches: creams applied to the face often stop at the jaw too. Dermatology texts describe neck skin as thinner than facial skin, with fewer oil glands, which is why it deserves at least as much care.
 
 ## Can you use a regular LED face mask on your neck?
 
@@ -58,7 +58,9 @@ The NŪR Protocol user manual recommends 3 to 5 sessions a week, in 4-week cycle
 
 ## Why the neck panel is not sold separately
 
-Because the two pieces are designed as one routine. They share the controller, the adapter, the timer and the personalised routine in the app. Selling the panel on its own would mean a second controller, a second set of settings, and a session the app could not plan. With NŪR Protocol, the neck is included in the price, not an add-on.
+Because for us, the face and the neck are one whole. A smooth, radiant face above a neck left to itself does not look younger; it looks unfinished. What we aim for is harmony, from the forehead to the décolleté. You would not go out with make-up on one eye only: the same goes for your skincare.
+
+That is why NŪR Protocol never treats one without the other. The two pieces share the controller, the adapter, the timer and the personalised routine in the app, and they come as one set. The neck is included in the price, never an option.
 
 ## What the research says about the neck
 
@@ -93,7 +95,7 @@ No. A face mask stops at the jawline. The neck and décolleté need a panel cut 
 Yes. Both plug into the same controller through the Y adapter cable included, and run in the same session.
 
 **Can the neck panel be bought on its own?**
-No. The face mask and the neck panel are sold together, as one set with one controller and one routine.
+No. For NŪR Protocol the face and the neck are one whole, so the face mask and the neck panel are sold together, with one controller and one routine.
 
 **Is the neck panel made of silicone?**
 Yes. Like the face mask, it is flexible silicone, so it follows the shape of the neck and décolleté.
@@ -110,5 +112,5 @@ Wipe it with a soft towel or a wet wipe after each session, let it air-dry, and 
 
 - **Facts used:** 60 + 44 LEDs, Y adapter, same controller, both pieces at once (supplier sheet and user manual, confirmed by the user 21/11/2026); timer 5/10/15/20, default 10; care, contraindications and the forearm test from the manual; 3–5 sessions a week in 4-week cycles from the manual.
 - **No claim** that LED light has a documented effect on neck skin: the research section says so plainly.
-- **"Dermatology texts describe neck skin as thinner"** is general knowledge; remove it if you prefer no physiology at all.
+- **Neck skin thinner than facial skin:** kept at the user's request (widely documented). Brand stance from the user: face and neck are one whole, never neglect one; "you would not go out with make-up on one eye only".
 - **Links:** the side-effects article does not exist yet; that link is switched on when it goes live, or removed.

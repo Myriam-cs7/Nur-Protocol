@@ -18,7 +18,7 @@ La plupart des masques LED s’arrêtent à la mâchoire. Le cou et le décollet
 
 Un masque visage est dessiné autour des yeux, du nez et de la bouche. Son bord inférieur suit la mâchoire. En dessous, l’avant du cou et le décolleté ne reçoivent aucune lumière, quel que soit le programme choisi.
 
-C’est d’autant plus dommage que le cou est souvent la première zone que l’on remarque, et la dernière que la routine atteint. Les crèmes s’arrêtent souvent à la mâchoire, elles aussi. Les ouvrages de dermatologie décrivent la peau du cou comme plus fine que celle du visage, avec moins de glandes sébacées : c’est une des raisons pour lesquelles on la traite avec douceur.
+Pourtant, le cou trahit les années autant que le visage, parfois davantage. C’est souvent la première zone que l’on remarque, et la dernière que la routine atteint : les crèmes s’arrêtent souvent à la mâchoire, elles aussi. Les ouvrages de dermatologie décrivent la peau du cou comme plus fine que celle du visage, avec moins de glandes sébacées : elle mérite donc au moins autant d’attention.
 
 ## Peut-on utiliser un masque LED visage sur le cou ?
 
@@ -58,7 +58,9 @@ La notice de NŪR Protocol recommande 3 à 5 séances par semaine, par cycles de
 
 ## Pourquoi le panneau cou n’est pas vendu séparément
 
-Parce que les deux pièces sont pensées comme une seule routine. Elles partagent la télécommande, l’adaptateur, le minuteur et la routine personnalisée de l’application. Vendre le panneau seul supposerait une seconde télécommande, d’autres réglages, et une séance que l’application ne pourrait pas planifier. Avec NŪR Protocol, le cou est inclus dans le prix, ce n’est pas une option.
+Parce que pour nous, le visage et le cou forment un tout. Un visage lisse et lumineux au-dessus d’un cou laissé de côté ne paraît pas plus jeune : il paraît inachevé. Ce que nous cherchons, c’est l’harmonie, du front jusqu’au décolleté. Vous ne sortiriez pas maquillée d’un seul œil : pour votre routine skincare, c’est pareil.
+
+C’est pourquoi NŪR Protocol ne traite jamais l’un sans l’autre. Les deux pièces partagent la télécommande, l’adaptateur, le minuteur et la routine personnalisée de l’application, et elles sont vendues ensemble. Le cou est inclus dans le prix, ce n’est jamais une option.
 
 ## Ce que disent les études sur le cou
 
@@ -93,7 +95,7 @@ Non. Un masque visage s’arrête à la mâchoire. Le cou et le décolleté ont 
 Oui. Les deux se branchent sur la même télécommande grâce au câble adaptateur en Y fourni, et fonctionnent pendant la même séance.
 
 **Peut-on acheter le panneau cou seul ?**
-Non. Le masque visage et le panneau cou sont vendus ensemble, avec une seule télécommande et une seule routine.
+Non. Pour NŪR Protocol, le visage et le cou forment un tout : le masque visage et le panneau cou sont vendus ensemble, avec une seule télécommande et une seule routine.
 
 **Le panneau cou est-il en silicone ?**
 Oui. Comme le masque visage, il est en silicone souple : il épouse la forme du cou et du décolleté.
@@ -110,5 +112,5 @@ Essuyez-le avec une serviette douce ou une lingette humide après chaque séance
 
 - **Faits utilisés :** 60 + 44 LED, adaptateur en Y, même télécommande, les deux pièces en même temps (fiche fournisseur et notice, confirmés le 21/11/2026) ; minuteur 5/10/15/20, 10 par défaut ; entretien, contre-indications et test sur l’avant-bras d’après la notice ; 3 à 5 séances par semaine par cycles de 4 semaines d’après la notice.
 - **Aucune promesse** d’effet documenté sur la peau du cou : la section « études » le dit clairement.
-- **« Peau du cou plus fine »** : connaissance générale ; à retirer si vous préférez ne rien dire de la physiologie.
+- **« Peau du cou plus fine »** : conservé à la demande de l’utilisatrice (très documenté). Position de marque : visage et cou forment un tout, on ne néglige jamais l’un ; « vous ne sortiriez pas maquillée d’un seul œil ».
 - **Volumes FR** : ceux du consultant, à vérifier avec l’export SEMrush FR.
