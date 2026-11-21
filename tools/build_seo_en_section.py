@@ -217,7 +217,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row" id="nur-faq-usage" aria-labelledby="nur-faq-usage-title">
-    <div class="nur-seo__label"><span class="nur-seo__idx">08 — Questions</span><h2 id="nur-faq-usage-title">Using NŪR Protocol: sessions, skin treatments and safety</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">08 — Questions</span><h2 id="nur-faq-usage-title">FAQ</h2></div>
     <div class="nur-seo__faq">
 """ + faq_html + """
     </div>
