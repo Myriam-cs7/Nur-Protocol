@@ -117,23 +117,30 @@ liq = """{%- liquid
   .nur-seo__faq-item[open] .nur-seo__plus::after { transform: rotate(0deg); }
   .nur-seo__faq-item p { margin: 0 0 22px; font-size: 14.5px; }
   /* Reserve band */
-  /* Reserve: full-bleed cream band (box-shadow + clip-path bleed, no horizontal scroll), same grid as the rows */
-  .nur-seo__reserve { position: relative; margin-top: 0; padding: 56px 0 104px; display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; align-items: start; border-top: 1px solid #E4DFD5; }
-  .nur-seo__reserve-img { display: block; width: 100%; height: auto; aspect-ratio: 1229 / 1280; object-fit: cover; margin-top: 28px; }
-  .nur-seo__reserve h2 { font-size: 30px; }
-  .nur-seo__reserve p { color: #4A4A4A; margin-bottom: 28px; max-width: 560px; text-align: left; }
-  .nur-seo__price { display: block; font-size: 22px; font-weight: 500; letter-spacing: -0.2px; color: #1A1A1A; margin-bottom: 10px; }
-  .nur-seo__cta { display: inline-block; padding: 17px 40px; background: #1A1A1A; color: #FFFFFF !important; border: 0; font-family: inherit; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none !important; cursor: pointer; transition: background .25s ease; }
+  /* Reserve: 50/50 split, photo left, content vertically centred against it */
+  .nur-seo__reserve { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 80px; align-items: center; padding: 56px 0 112px; border-top: 1px solid #E4DFD5; }
+  .nur-seo__reserve-img { display: block; width: 100%; height: auto; aspect-ratio: 1229 / 1280; object-fit: cover; }
+  .nur-seo__reserve-body { max-width: 440px; }
+  .nur-seo__reserve h2 { font-size: 34px; line-height: 1.15; margin-bottom: 26px; }
+  .nur-seo__price { display: block; font-size: 24px; font-weight: 500; letter-spacing: -0.2px; color: #1A1A1A; margin-bottom: 8px; }
+  .nur-seo__reserve p { color: #4A4A4A; margin-bottom: 30px; text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+  .nur-seo__cta { display: block; width: 100%; padding: 18px 24px; background: #1A1A1A; color: #FFFFFF !important; border: 0; font-family: inherit; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-align: center; text-decoration: none !important; cursor: pointer; transition: background .25s ease, color .25s ease; }
   .nur-seo__cta:hover { background: #C8A96E; color: #1A1A1A !important; }
+  .nur-seo__klarna { display: block; margin-top: 12px; font-size: 13px; color: #8A8A8A; text-align: center; }
+  .nur-seo__assure { list-style: none; margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid #E4DFD5; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .nur-seo__assure li { font-size: 12px; line-height: 1.45; letter-spacing: .3px; color: #4A4A4A; }
+  .nur-seo__assure strong { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: #C8A96E; margin-bottom: 4px; }
   @media (max-width: 1099px) {
-    .nur-seo__row, .nur-seo__reserve { grid-template-columns: 240px minmax(0, 1fr); column-gap: 48px; }
+    .nur-seo__row { grid-template-columns: 240px minmax(0, 1fr); column-gap: 48px; }
+    .nur-seo__reserve { column-gap: 48px; }
   }
   @media (max-width: 899px) {
     .nur-seo { padding-top: 48px; }
     .nur-seo__row, .nur-seo__reserve { grid-template-columns: 1fr; row-gap: 20px; padding: 40px 0; }
+    .nur-seo__reserve { row-gap: 32px; }
+    .nur-seo__reserve-body { max-width: none; }
     .nur-seo__reserve { padding: 40px 0 64px; }
-    .nur-seo__reserve-img { margin-top: 20px; }
-    .nur-seo__reserve h2 { font-size: 24px; }
+    .nur-seo__reserve h2 { font-size: 26px; }
     .nur-seo h2 { font-size: 22px; }
     .nur-seo p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
     .nur-seo__cards { grid-template-columns: 1fr; gap: 32px; }
@@ -229,11 +236,19 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__reserve">
-    <div class="nur-seo__label"><span class="nur-seo__idx">09 — Reserve</span><h2>Reserve NŪR Protocol</h2><img class="nur-seo__reserve-img" src="{{ 'nur-reserve-red-light.webp' | asset_url }}" width="800" height="833" loading="lazy" alt="Woman holding a Nur Protocol LED face mask glowing red"></div>
-    <div>
-      <span class="nur-seo__price">{{ nur_price | money_without_trailing_zeros }}{% if nur_klarna %} <span style="font-size:15px;color:#4A4A4A;font-weight:400;">or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna</span>{% endif %}</span>
+    <img class="nur-seo__reserve-img" src="{{ 'nur-reserve-red-light.webp' | asset_url }}" width="800" height="833" loading="lazy" alt="Woman holding a Nur Protocol LED face mask glowing red">
+    <div class="nur-seo__reserve-body">
+      <span class="nur-seo__idx">09 — Reserve</span>
+      <h2>Reserve NŪR Protocol</h2>
+      <span class="nur-seo__price">{{ nur_price | money_without_trailing_zeros }}</span>
       <p>The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.</p>
       <button type="button" class="nur-seo__cta" onclick="var b=document.querySelector('.buy-buttons-block')||document.querySelector('product-form-component');if(b){b.scrollIntoView({behavior:'smooth',block:'center'});}">Reserve NŪR Protocol</button>
+      {%- if nur_klarna -%}<span class="nur-seo__klarna">or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna at checkout</span>{%- endif -%}
+      <ul class="nur-seo__assure">
+        <li><strong>Warranty</strong>2 years</li>
+        <li><strong>Delivery</strong>Up to 2 weeks, tracked</li>
+        <li><strong>Included</strong>NŪR Skincoach</li>
+      </ul>
     </div>
   </section>
 </div>
