@@ -116,7 +116,7 @@ An LED mask is a cosmetic skincare tool. It is not the right first step if:
 - you are pregnant or breastfeeding: the user manual lists this too, and NŪR Skincoach does not offer a routine during these periods;
 - you expect the result of an in-clinic procedure: no home device replicates it.
 
-For the practical checks before a first session, see [LED face mask side effects and precautions](/blogs/news/led-face-mask-side-effects). For the neck, see [why the neck needs its own panel](/blogs/news/led-face-mask-with-neck).
+The full list of precautions is in the [contraindications on the product page](/products/nur-protocol). For the neck, see [why the neck needs its own panel](/blogs/news/led-face-and-neck-mask).
 
 ## FAQ
 
@@ -155,7 +155,7 @@ No. Trials used fixed frequencies, usually two to five sessions a week, and the 
 
 ## Notes for review (not published)
 
-- **Links to articles that don't exist yet** (side effects, neck): switched on as those articles go live, or removed if this one is published first. No dead link goes out.
+- **Links:** add a link to the side-effects article once it is live.
 - **No percentages** from the studies are quoted, on purpose, so that no figure can be read as a claim about NŪR Protocol.
 - **Wording** follows the project rule: the skin assessment gives the personalised routine; the selfie is optional.
 - **Contraindications** come from the user manual (page 5); 3–5 sessions a week in 4-week cycles from the manual too; about 10 minutes per session confirmed by the user.

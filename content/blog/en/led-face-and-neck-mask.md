@@ -84,7 +84,7 @@ After each session, wipe both silicone pieces with a soft towel or a wet wipe, l
 
 ## Who should not use it
 
-The NŪR Protocol user manual lists the people who should not use the device: pregnant or breastfeeding people; people with light sensitivity or taking photosensitising medication; people with a hereditary eye condition or a skin disease such as lupus, photosensitive eczema or albinism. Before the first session, the manual asks for a 10-minute test on the forearm: if redness or itching appears, stop and see a dermatologist. NŪR Protocol is intended for adults aged 18 and over. More in [LED face mask side effects and precautions](/blogs/news/led-face-mask-side-effects).
+The NŪR Protocol user manual lists the people who should not use the device: pregnant or breastfeeding people; people with light sensitivity or taking photosensitising medication; people with a hereditary eye condition or a skin disease such as lupus, photosensitive eczema or albinism. Before the first session, the manual asks for a 10-minute test on the forearm: if redness or itching appears, stop and see a dermatologist. NŪR Protocol is intended for adults aged 18 and over.
 
 ## FAQ
 
@@ -113,4 +113,4 @@ Wipe it with a soft towel or a wet wipe after each session, let it air-dry, and 
 - **Facts used:** 60 + 44 LEDs, Y adapter, same controller, both pieces at once (supplier sheet and user manual, confirmed by the user 21/11/2026); timer 5/10/15/20, default 10; care, contraindications and the forearm test from the manual; 3–5 sessions a week in 4-week cycles from the manual.
 - **No claim** that LED light has a documented effect on neck skin: the research section says so plainly.
 - **Neck skin thinner than facial skin:** kept at the user's request (widely documented). Brand stance from the user: face and neck are one whole, never neglect one; "you would not go out with make-up on one eye only".
-- **Links:** the side-effects article does not exist yet; that link is switched on when it goes live, or removed.
+- **Links:** the side-effects article does not exist yet; add a link to it once it is live.
