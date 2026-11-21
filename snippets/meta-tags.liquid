@@ -177,6 +177,14 @@
   if page and page.handle == 'data-sharing-opt-out'
     assign nur_noindex = true
   endif
+  comment
+    Articles written in English only (tag "en-only") have no French text, so
+    their /fr/ copy would be a duplicate of the English page: keep it out of
+    Google's index.
+  endcomment
+  if request.page_type == 'article' and request.locale.iso_code == 'fr' and article.tags contains 'en-only'
+    assign nur_noindex = true
+  endif
 -%}
 {%- if nur_noindex -%}
   <meta name="robots" content="noindex, follow">
