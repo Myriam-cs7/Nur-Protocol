@@ -153,7 +153,7 @@ liq = """{%- liquid
 
 <div class="nur-seo" lang="en">
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">01 — The idea</span><h2>Why a fixed programme is a guess</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">The idea</span><h2>Why a fixed programme is a guess</h2></div>
     <div>
       <p class="nur-seo__lead">An LED mask ships with a set of programmes. The user picks one and repeats it, week after week. Texture, breakouts, redness and fine lines rarely call for the same wavelength in the same order.</p>
       <p>NŪR Protocol moves that decision into the app: NŪR Skincoach reads a selfie and a short questionnaire, then sets the weekly protocol. The set covers face and neck.</p>
@@ -161,7 +161,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">02 — NŪR Skincoach</span><h2>NŪR Skincoach: the diagnosis and the weekly protocol</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">NŪR Skincoach</span><h2>NŪR Skincoach: the diagnosis and the weekly protocol</h2></div>
     <div>
       <p>The diagnosis changes the use of the device: a selfie and a few questions in the app return a protocol, not a score.</p>
       <div class="nur-seo__cards">
@@ -188,7 +188,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">03 — The light</span><h2>What each of the seven wavelengths does</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">The light</span><h2>What each of the seven wavelengths does</h2></div>
     <div>
       <p>Seven settings at 30 mW/cm², each selected for one concern.</p>
       <div class="nur-seo__waves">
@@ -199,21 +199,21 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">04 — The ritual</span><h2>How a session runs</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">The ritual</span><h2>How a session runs</h2></div>
     <ol class="nur-seo__steps">
 """ + steps_html + """
     </ol>
   </section>
 
   <section class="nur-seo__row" id="nur-specs">
-    <div class="nur-seo__label"><span class="nur-seo__idx">05 — Details</span><h2>Technical specifications</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">Details</span><h2>Technical specifications</h2></div>
     <dl class="nur-seo__specs">
 """ + specs_html + """
     </dl>
   </section>
 
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">06 — Testers</span><h2>Tester results: 4.6/5</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">Testers</span><h2>Tester results: 4.6/5</h2></div>
     <div>
       <span class="nur-seo__stars" aria-hidden="true">★★★★★</span>
       <p>Twelve testers rated NŪR Protocol 4.6/5. Their unedited reviews are on the <a href="/pages/reviews">NŪR Protocol tester reviews page</a>.</p>
@@ -222,7 +222,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row">
-    <div class="nur-seo__label"><span class="nur-seo__idx">07 — Delivery</span><h2>Delivery and support in the United Arab Emirates</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">Delivery</span><h2>Delivery and support in the United Arab Emirates</h2></div>
     <div>
       <p>NŪR Protocol ships worldwide. For the United Arab Emirates, delivery takes up to 2 weeks and shipping is free; the total is confirmed at checkout. Every order ships with tracking.</p>
       <p>Orders, protocols and returns go through the <a href="/pages/contact">NŪR Protocol contact page</a>, with individual replies. Returns are accepted within 14 days of delivery, as set out in the <a href="/policies/refund-policy">refund policy</a>. Warranty: 2 years.</p>
@@ -230,7 +230,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__row" id="nur-faq-usage" aria-labelledby="nur-faq-usage-title">
-    <div class="nur-seo__label"><span class="nur-seo__idx">08 — Questions</span><h2 id="nur-faq-usage-title">FAQ</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">Questions</span><h2 id="nur-faq-usage-title">FAQ</h2></div>
     <div class="nur-seo__faq">
 """ + faq_html + """
     </div>
@@ -239,7 +239,7 @@ liq = """{%- liquid
   <section class="nur-seo__reserve">
     <img class="nur-seo__reserve-img" src="{{ 'nur-reserve-red-light.webp' | asset_url }}" width="800" height="833" loading="lazy" alt="Woman holding a Nur Protocol LED face mask glowing red">
     <div class="nur-seo__reserve-body">
-      <span class="nur-seo__idx">09 — Reserve</span>
+      <span class="nur-seo__idx">Reserve</span>
       <h2>Reserve NŪR Protocol</h2>
       <span class="nur-seo__price">{{ nur_price | money_without_trailing_zeros }}</span>
       <p>The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.</p>
