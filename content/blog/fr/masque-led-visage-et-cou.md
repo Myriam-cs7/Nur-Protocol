@@ -3,7 +3,7 @@ status: BROUILLON, non publié, en attente de validation
 brief: 10 (FR), version française de l’article 07 (cou), rédigée en français et non traduite
 url: /fr/blogs/news/masque-led-visage-et-cou
 english_version: /blogs/news/led-face-and-neck-mask (même article Shopify, traduction française)
-meta_title: "Masque LED visage et cou : pourquoi le cou a son panneau | NŪR Protocol"
+meta_title: "Masque LED visage et cou, mode d’emploi | NŪR Protocol"
 meta_description: "Ce qu’un masque LED visage seul oublie, comment se pose un panneau cou et décolleté en silicone, et comment visage et cou se traitent en une séance."
 target_queries: masque led visage et cou (FR 390/mois selon le consultant), masque led cou (170)
 ---

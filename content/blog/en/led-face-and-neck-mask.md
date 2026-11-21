@@ -3,7 +3,7 @@ status: DRAFT, not published, awaiting validation
 brief: 07 (neck), retargeted after the SEMrush US export (21/11/2026)
 url: /blogs/news/led-face-and-neck-mask
 french_version: /fr/blogs/news/masque-led-visage-et-cou (same Shopify article, French translation written natively)
-meta_title: "LED face and neck mask: why the neck needs its own panel | NŪR Protocol"
+meta_title: "Silicone LED face and neck mask, explained | NŪR Protocol"
 meta_description: "What a face-only LED mask leaves out, how a silicone neck and décolleté panel is fitted, and how face and neck run in one session and one routine."
 target_queries: silicone led face and neck mask (US 210, KD 28), led face and neck mask (170, KD 40), best led face and neck mask (110), led mask for face and neck (50, KD 23), led face mask with neck attachment (40), can you use led face mask on neck (20)
 ---
