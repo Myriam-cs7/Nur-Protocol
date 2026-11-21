@@ -58,7 +58,7 @@ La notice de NŪR Protocol recommande 3 à 5 séances par semaine, par cycles de
 
 ## Pourquoi le panneau cou n’est pas vendu séparément
 
-Parce que pour nous, le visage et le cou forment un tout. Un visage lisse et lumineux au-dessus d’un cou laissé de côté ne paraît pas plus jeune : il paraît inachevé. Ce que nous cherchons, c’est l’harmonie, du front jusqu’au décolleté. Vous ne sortiriez pas maquillée d’un seul œil : pour votre routine skincare, c’est pareil.
+Parce que pour nous, le visage et le cou forment un tout. Un visage lisse et lumineux au-dessus d’un cou laissé de côté ne paraît pas plus jeune : il paraît inachevé. Ce que nous cherchons, c’est l’harmonie, du front jusqu’au décolleté. Personne ne sort maquillé d’un seul œil : pour la routine skincare, c’est pareil.
 
 C’est pourquoi NŪR Protocol ne traite jamais l’un sans l’autre. Les deux pièces partagent la télécommande, l’adaptateur, le minuteur et la routine personnalisée de l’application, et elles sont vendues ensemble. Le cou est inclus dans le prix, ce n’est jamais une option.
 
@@ -112,5 +112,5 @@ Essuyez-le avec une serviette douce ou une lingette humide après chaque séance
 
 - **Faits utilisés :** 60 + 44 LED, adaptateur en Y, même télécommande, les deux pièces en même temps (fiche fournisseur et notice, confirmés le 21/11/2026) ; minuteur 5/10/15/20, 10 par défaut ; entretien, contre-indications et test sur l’avant-bras d’après la notice ; 3 à 5 séances par semaine par cycles de 4 semaines d’après la notice.
 - **Aucune promesse** d’effet documenté sur la peau du cou : la section « études » le dit clairement.
-- **« Peau du cou plus fine »** : conservé à la demande de l’utilisatrice (très documenté). Position de marque : visage et cou forment un tout, on ne néglige jamais l’un ; « vous ne sortiriez pas maquillée d’un seul œil ».
+- **« Peau du cou plus fine »** : conservé à la demande de l’utilisatrice (très documenté). Position de marque : visage et cou forment un tout, on ne néglige jamais l’un ; « personne ne sort maquillé d’un seul œil » (formulation neutre voulue).
 - **Volumes FR** : ceux du consultant, à vérifier avec l’export SEMrush FR.

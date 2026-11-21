@@ -58,7 +58,7 @@ The NŪR Protocol user manual recommends 3 to 5 sessions a week, in 4-week cycle
 
 ## Why the neck panel is not sold separately
 
-Because for us, the face and the neck are one whole. A smooth, radiant face above a neck left to itself does not look younger; it looks unfinished. What we aim for is harmony, from the forehead to the décolleté. You would not go out with make-up on one eye only: the same goes for your skincare.
+Because for us, the face and the neck are one whole. A smooth, radiant face above a neck left to itself does not look younger; it looks unfinished. What we aim for is harmony, from the forehead to the décolleté. Nobody goes out with make-up on one eye only: the same goes for skincare.
 
 That is why NŪR Protocol never treats one without the other. The two pieces share the controller, the adapter, the timer and the personalised routine in the app, and they come as one set. The neck is included in the price, never an option.
 
