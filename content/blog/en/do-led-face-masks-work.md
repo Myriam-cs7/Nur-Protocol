@@ -101,8 +101,8 @@ An LED mask is a cosmetic routine tool. It is not the right first step if:
 
 - you have a skin condition that is spreading, painful, bleeding or changing, or a mole that has changed: see a doctor;
 - you have moderate to severe acne, or acne that scars: prescription treatments have stronger evidence;
-- you take medication that makes you sensitive to light, or have a condition affected by light: ask your doctor or pharmacist first;
-- you are pregnant or breastfeeding: we do not issue a protocol for these periods, and the decision belongs with your doctor;
+- you take medication that makes you sensitive to light, have light-sensitive skin, or have a condition such as lupus, photosensitive eczema, albinism or a hereditary eye condition: the NŪR Protocol user manual lists these among the situations in which the device should not be used, and your doctor or pharmacist is the right person to ask;
+- you are pregnant or breastfeeding: the user manual lists this too, and NŪR Skincoach does not issue a protocol during these periods;
 - you expect the result of an in-clinic procedure: no home device replicates it.
 
 For the practical checks before a first session, see our guide to [precautions before a first session](/blogs/news/led-face-mask-side-effects). For how often sessions run, see [how session frequency is set](/blogs/news/how-often-to-use-led-face-mask). To compare devices on criteria you can verify, see [the criteria used to compare LED masks](/pages/best-led-face-mask).
@@ -146,5 +146,5 @@ Trials used fixed frequencies, usually two to five sessions a week. More is not 
 
 - **Links to pages that don't exist yet** (side effects, frequency, best LED face mask): they will be switched on as those pages go live, or removed if this article is published first. No dead link goes out.
 - **No percentages** from the studies are quoted, on purpose, so that no figure can be read as a claim about NŪR Protocol.
-- **Near-infrared:** the table describes the research only. If NŪR Protocol has a near-infrared LED, it will be added to the product page and specs first, with the exact value from the supplier sheet.
-- **Minimum age 18** and the pregnancy line match the product-page FAQ.
+- **Minimum age 18** matches the product-page FAQ. The contraindications quoted come from the user manual (page 5): pregnancy or breastfeeding; light sensitivity or photosensitising medication; hereditary eye conditions or skin diseases such as lupus, photosensitive eczema or albinism.
+- **Near-infrared:** confirmed absent from NŪR Protocol (supplier sheet, 21/11/2026). The table describes the research only and makes no claim about the device.

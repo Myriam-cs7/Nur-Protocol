@@ -7,9 +7,9 @@ faq=[
 ("Can NŪR Protocol be used with a retinoid (retinol, tretinoin, adapalene)?",
  "Retinoids such as retinol, tretinoin and adapalene can leave the skin more reactive, so this FAQ does not set the combination. Any retinoid in use is declared during the NŪR Skincoach assessment so the protocol accounts for it, and the sequence is confirmed with the prescribing dermatologist before the first session. Use is interrupted if irritation appears."),
 ("Is NŪR Protocol safe around the eyes?",
- "The LEDs are never looked at directly, and sessions run with the eyes closed, as the user manual describes. Two silicone eye protectors are included in the box and are put in place before the mask is switched on. Any ocular pathology, recent eye surgery or eye sensitivity requires an ophthalmologist's advice before use; the device does not treat eye conditions."),
+ "The LEDs are never looked at directly. Two silicone eye protectors are included in the box and, as the user manual describes, are put in place before the mask is switched on. The user manual lists hereditary eye conditions among the situations in which the device should not be used; any other eye condition, recent eye surgery or eye sensitivity requires an ophthalmologist's advice before use. The device does not treat eye conditions."),
 ("Can NŪR Protocol be used during pregnancy or breastfeeding?",
- "This FAQ does not issue a medical opinion on LED use during pregnancy or breastfeeding, and no session frequency is recommended here for those periods. NŪR Skincoach can prepare the routine, but use of the device is validated beforehand with a dermatologist, an obstetrician or the physician following the pregnancy, and that instruction prevails over the app's protocol."),
+ "No. The user manual lists pregnancy and breastfeeding among the situations in which NŪR Protocol should not be used, and NŪR Skincoach does not issue a protocol during these periods."),
 ("What is the minimum age for NŪR Protocol?",
  "NŪR Protocol is an adult skincare device, intended for users aged 18 and over. Below that age, a session must be validated with a dermatologist or a paediatrician before use, and the protocol is not applied without that advice."),
 ("What does the NŪR Skincoach diagnosis change in practice?",
@@ -17,11 +17,11 @@ faq=[
 ]
 ld={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}
 faq_html='\n'.join(f'    <div class="nur-seo__faq-item">\n      <h3>{html.escape(q,quote=False)}</h3>\n      <p>{html.escape(a,quote=False)}</p>\n    </div>' for q,a in faq)
-waves=[("Red — 633 nm","The deepest of the seven. Used for firmness and collagen support."),
+waves=[("Red — 620–630 nm","The deepest of the seven. Used for firmness and collagen support."),
 ("Blue — 440–450 nm","Used on visible pores, in the clarity step."),
-("Yellow — 590 nm","Used for radiance, uneven tone and sun spots."),
+("Yellow — 550–630 nm","Used for radiance, uneven tone and sun spots."),
 ("Green — 540–550 nm","Used on the appearance of dark spots."),
-("Cyan — 490 nm","Used on skin that reacts easily."),
+("Cyan — 440–550 nm","Used on skin that reacts easily."),
 ("White — 440–630 nm","A broad band, used for renewal."),
 ("Magenta — red + blue","Clarity and firmness in one session.")]
 waves_html='\n'.join(f'      <div class="nur-seo__wave">\n        <h3>{t}</h3>\n        <p>{d}</p>\n      </div>' for t,d in waves)
@@ -38,10 +38,11 @@ steps=[("Cleanse and dry","Skin is clean and dry, without the products the proto
 ("After","The skin is left to the products named in the protocol.")]
 steps_html='\n'.join('      <li class="nur-seo__step"><span class="nur-seo__num">%02d</span><div><h3>%s</h3><p>%s</p></div></li>' % (i+1,t,d) for i,(t,d) in enumerate(steps))
 specs=[("Treatment areas","Full face mask, plus a neck and décolleté panel."),
-("Wavelengths","633 nm, 440–450 nm, 590 nm, 540–550 nm, 490 nm, 440–630 nm, and red + blue combined."),
+("Wavelengths","620–630 nm, 440–450 nm, 550–630 nm, 540–550 nm, 440–550 nm, 440–630 nm, and red + blue combined."),
 ("Irradiance","30 mW/cm²."),
+("LEDs","104: 60 on the face mask, 44 on the neck panel."),
 ("NŪR Skincoach","Access with the digital Gold Card (QR code); an access card is in the box."),
-("In the box","Face mask, neck panel, controller, 2 adjustable straps, 2 silicone eye protectors, USB-C cable, user manual, NŪR Skincoach access card."),
+("In the box","Face mask, neck panel, controller, Y adapter cable, 2 adjustable straps, 2 silicone eye protectors, USB-C cable, user manual, NŪR Skincoach access card."),
 ("Warranty","2 years."),
 ("Price","{{ nur_price | money_without_trailing_zeros }}{% if nur_klarna %}, or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna{% endif %}.")]
 specs_html='\n'.join('      <div class="nur-seo__spec"><dt>%s</dt><dd>%s</dd></div>' % s for s in specs)
