@@ -22,11 +22,57 @@
   content=""
 >
 
+{%- comment -%}
+  Fallback meta descriptions (SEO audit 2026-11-21) for pages that have none in
+  Shopify admin: About, Reviews, Contact, the "all" collection and the policies.
+  EN/FR like the rest of the theme. A description set in admin always wins.
+{%- endcomment -%}
+{%- liquid
+  assign nur_desc = page_description
+  if nur_desc == blank
+    assign nur_desc_fr = false
+    if request.locale.iso_code == 'fr'
+      assign nur_desc_fr = true
+    endif
+    if page and page.handle == 'about'
+      if nur_desc_fr
+        assign nur_desc = 'Découvrez Myriam, fondatrice de NŪR Protocol, et l’histoire de NŪR Skincoach : un bilan de peau par IA qui donne une routine LED personnalisée, visage et cou.'
+      else
+        assign nur_desc = 'Meet Myriam, founder of NŪR Protocol, and the story behind NŪR Skincoach: an AI skin assessment that gives a personalised LED routine for face and neck.'
+      endif
+    elsif page and page.handle == 'reviews'
+      if nur_desc_fr
+        assign nur_desc = 'Les avis non retouchés des douze testeurs de NŪR Protocol, le masque LED IA visage et cou, noté 4,6/5.'
+      else
+        assign nur_desc = 'Unedited reviews from the twelve testers of NŪR Protocol, the AI LED face and neck mask, rated 4.6/5.'
+      endif
+    elsif page and page.handle == 'contact'
+      if nur_desc_fr
+        assign nur_desc = 'Contactez NŪR Protocol : commande, routine NŪR Skincoach, livraison ou retours. Chaque message reçoit une réponse personnelle.'
+      else
+        assign nur_desc = 'Contact NŪR Protocol about your order, your NŪR Skincoach routine, delivery or returns. Every message gets a personal reply.'
+      endif
+    elsif collection and collection.handle == 'all'
+      if nur_desc_fr
+        assign nur_desc = 'NŪR Protocol, le masque LED IA visage et cou avec NŪR Skincoach : le bilan de votre peau donne votre routine LED personnalisée.'
+      else
+        assign nur_desc = 'NŪR Protocol, the AI LED face and neck mask with NŪR Skincoach: your skin assessment gives your personalised LED routine.'
+      endif
+    elsif request.page_type == 'policy'
+      if nur_desc_fr
+        assign nur_desc = 'Informations NŪR Protocol : livraison, retours sous 14 jours, garantie 2 ans, confidentialité et conditions de vente.'
+      else
+        assign nur_desc = 'NŪR Protocol customer information: delivery, 14-day returns, 2-year warranty, privacy and terms of sale.'
+      endif
+    endif
+  endif
+-%}
+
 {%- liquid
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
-  assign og_description = page_description | default: shop.description | default: shop.name
+  assign og_description = nur_desc | default: shop.description | default: shop.name
 
   if request.page_type == 'product'
     assign og_type = 'product'
@@ -141,9 +187,9 @@
   href="{{ canonical_url }}"
 >
 
-{% if page_description %}
+{% if nur_desc != blank %}
   <meta
     name="description"
-    content="{{ page_description | escape }}"
+    content="{{ nur_desc | escape }}"
   >
 {% endif %}
