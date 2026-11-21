@@ -118,7 +118,8 @@ liq = """{%- liquid
   .nur-seo__faq-item p { margin: 0 0 22px; font-size: 14.5px; }
   /* Reserve band */
   /* Reserve: full-bleed cream band (box-shadow + clip-path bleed, no horizontal scroll), same grid as the rows */
-  .nur-seo__reserve { position: relative; margin-top: 24px; padding: 96px 0 104px; display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; align-items: start; background: #F5EFE4; box-shadow: 0 0 0 100vmax #F5EFE4; clip-path: inset(0 -100vmax); }
+  .nur-seo__reserve { position: relative; margin-top: 0; padding: 56px 0 104px; display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; align-items: start; border-top: 1px solid #E4DFD5; }
+  .nur-seo__reserve-img { display: block; width: 100%; height: auto; aspect-ratio: 1229 / 1280; object-fit: cover; margin-top: 28px; }
   .nur-seo__reserve h2 { font-size: 30px; }
   .nur-seo__reserve p { color: #4A4A4A; margin-bottom: 28px; max-width: 560px; text-align: left; }
   .nur-seo__price { display: block; font-size: 22px; font-weight: 500; letter-spacing: -0.2px; color: #1A1A1A; margin-bottom: 10px; }
@@ -130,7 +131,8 @@ liq = """{%- liquid
   @media (max-width: 899px) {
     .nur-seo { padding-top: 48px; }
     .nur-seo__row, .nur-seo__reserve { grid-template-columns: 1fr; row-gap: 20px; padding: 40px 0; }
-    .nur-seo__reserve { padding: 56px 0 64px; }
+    .nur-seo__reserve { padding: 40px 0 64px; }
+    .nur-seo__reserve-img { margin-top: 20px; }
     .nur-seo__reserve h2 { font-size: 24px; }
     .nur-seo h2 { font-size: 22px; }
     .nur-seo p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
@@ -227,7 +229,7 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__reserve">
-    <div class="nur-seo__label"><span class="nur-seo__idx">09 — Reserve</span><h2>Reserve NŪR Protocol</h2></div>
+    <div class="nur-seo__label"><span class="nur-seo__idx">09 — Reserve</span><h2>Reserve NŪR Protocol</h2><img class="nur-seo__reserve-img" src="{{ 'nur-reserve-red-light.webp' | asset_url }}" width="800" height="833" loading="lazy" alt="Woman holding a Nur Protocol LED face mask glowing red"></div>
     <div>
       <span class="nur-seo__price">{{ nur_price | money_without_trailing_zeros }}{% if nur_klarna %} <span style="font-size:15px;color:#4A4A4A;font-weight:400;">or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna</span>{% endif %}</span>
       <p>The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.</p>
