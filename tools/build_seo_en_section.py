@@ -17,7 +17,7 @@ faq=[
 ]
 ld={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}
 faq_html='\n'.join(f'    <div class="nur-seo__faq-item">\n      <h3>{html.escape(q,quote=False)}</h3>\n      <p>{html.escape(a,quote=False)}</p>\n    </div>' for q,a in faq)
-waves=[("Red — 620–630 nm","The deepest of the seven. Used for firmness and collagen support."),
+waves=[("Red — 633 nm","The deepest of the seven. Used for firmness and collagen support."),
 ("Blue — 440–450 nm","Used on visible pores, in the clarity step."),
 ("Yellow — 550–630 nm","Used for radiance, uneven tone and sun spots."),
 ("Green — 540–550 nm","Used on the appearance of dark spots."),
@@ -38,7 +38,7 @@ steps=[("Cleanse and dry","Skin is clean and dry, without the products the proto
 ("After","The skin is left to the products named in the protocol.")]
 steps_html='\n'.join('      <li class="nur-seo__step"><span class="nur-seo__num">%02d</span><div><h3>%s</h3><p>%s</p></div></li>' % (i+1,t,d) for i,(t,d) in enumerate(steps))
 specs=[("Treatment areas","Full face mask, plus a neck and décolleté panel."),
-("Wavelengths","620–630 nm, 440–450 nm, 550–630 nm, 540–550 nm, 440–550 nm, 440–630 nm, and red + blue combined."),
+("Wavelengths","633 nm, 440–450 nm, 550–630 nm, 540–550 nm, 440–550 nm, 440–630 nm, and red + blue combined."),
 ("Irradiance","30 mW/cm²."),
 ("LEDs","104: 60 on the face mask, 44 on the neck panel."),
 ("NŪR Skincoach","Access with the digital Gold Card (QR code); an access card is in the box."),
