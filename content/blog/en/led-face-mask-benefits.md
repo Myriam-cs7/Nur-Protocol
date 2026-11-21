@@ -53,7 +53,7 @@ On acne, the picture is more mixed:
 - **A Cochrane review** pooled 71 studies and 4,211 participants (Barbaric et al., 2016). It concluded that high-quality evidence was lacking and rated most comparisons as very low certainty. Most trials were small, short and often industry-sponsored.
 - **A 2025 meta-analysis of at-home LED devices** pooled six randomised trials and 216 participants with mild to moderate acne (Ershadi & Barbieri, *JAMA Dermatology*, 2025). Red and blue devices both appeared effective, more so in combination. The authors flagged possible publication bias and called for larger trials.
 
-On home devices in general, a systematic review of 37 trials found LEDs a reasonable option for acne at home, and noted the small number of randomised trials and the lack of long-term data (*Arch Dermatol Res*, 2021). A 2024 review of home facial devices reached a similar conclusion: most LED studies were small, often non-randomised, and followed people for a short time (Bu et al., *Clin Cosmet Investig Dermatol*, 2024).
+On home devices in general, a systematic review of 37 trials found LEDs a reasonable option for acne at home, and noted the small number of randomised trials and the lack of long-term data (*Arch Dermatol Res*, 2022). A 2024 review of home facial devices reached a similar conclusion: most LED studies were small, often non-randomised, and followed people for a short time (Bu et al., *Clin Cosmet Investig Dermatol*, 2024).
 
 ## Benefit 3: radiance and tone (the other colours)
 
