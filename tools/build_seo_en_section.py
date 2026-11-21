@@ -257,6 +257,10 @@ liq = """{%- liquid
 <script type="application/ld+json">
 """ + json.dumps(ld, ensure_ascii=False, indent=2) + """
 </script>
+{%- else -%}
+{%- comment -%} French page: this section has no content, so keep a gap between the product and the footer. {%- endcomment -%}
+<div class="nur-fr-end" aria-hidden="true"></div>
+<style>.nur-fr-end { height: 96px; } @media (max-width: 749px) { .nur-fr-end { height: 56px; } }</style>
 {%- endunless -%}
 """
 
