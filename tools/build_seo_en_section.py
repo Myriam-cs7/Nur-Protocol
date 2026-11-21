@@ -81,8 +81,10 @@ liq = """{%- liquid
   .nur-seo__note { font-size: 13px !important; color: #8A8A8A !important; text-align: center; margin-top: 22px !important; }
   /* Skincoach: three cards */
   .nur-seo__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-  .nur-seo__card { background: #FAFAF8; padding: 26px 24px; }
-  .nur-seo__card p { font-size: 14px; margin: 0; }
+  .nur-seo__card { background: #FAFAF8; padding: 0 0 26px; }
+  .nur-seo__card-img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 22px; }
+  .nur-seo__card p { font-size: 14px; margin: 0 24px; }
+  .nur-seo__card .nur-seo__num, .nur-seo__card h3 { margin-left: 24px; margin-right: 24px; }
   .nur-seo__num { display: block; font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C8A96E; margin-bottom: 10px; }
   /* Wavelengths: colour swatches */
   .nur-seo__waves { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px 24px; }
@@ -153,16 +155,19 @@ liq = """{%- liquid
     </div>
     <div class="nur-seo__cards">
       <div class="nur-seo__card">
+        <img class="nur-seo__card-img" src="{{ 'nur-skincoach-step-1-selfie.webp' | asset_url }}" width="700" height="700" loading="lazy" alt="Nur Skincoach app: selfie skin analysis of texture, fine lines, redness and acne, with a baseline created">
         <span class="nur-seo__num">01</span>
         <h3>The selfie assessment</h3>
         <p>The app maps fine lines, texture, redness and acne from one photograph, and records it as a baseline. The selfie is optional: the assessment can also run on the questionnaire alone. Products in use, treatments in progress and retinoids are declared in the same step.</p>
       </div>
       <div class="nur-seo__card">
+        <img class="nur-seo__card-img" src="{{ 'nur-skincoach-step-2-weekly.webp' | asset_url }}" width="700" height="700" loading="lazy" alt="Nur Skincoach app on a phone: the weekly protocol with LED sessions, focus, routine pairing and progress against the baseline">
         <span class="nur-seo__num">02</span>
         <h3>What the weekly protocol changes</h3>
         <p>Each week the app returns a plan: wavelengths, order, frequency, and the products to pair. The plan is read before the session and followed as written; frequency is not raised on a separate decision. Progress is read against the user's own baseline.</p>
       </div>
       <div class="nur-seo__card">
+        <img class="nur-seo__card-img" src="{{ 'nur-skincoach-step-3-wavelengths.webp' | asset_url }}" width="700" height="700" loading="lazy" alt="Nur Protocol face mask, neck panel and controller with the seven LED wavelengths">
         <span class="nur-seo__num">03</span>
         <h3>Personalised protocol versus factory setting</h3>
         <p>LED masks are usually compared on wavelength, LED count, session length and price. On most of them, the programme is chosen by the user and stays fixed. NŪR Protocol adds a step: the combination is set from the assessment and updated every week.</p>
