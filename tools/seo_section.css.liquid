@@ -1,0 +1,83 @@
+<style>
+  /* Editorial grid: every section = narrow heading column + text column, all left-aligned on one shared width. */
+  .nur-seo { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1A1A1A; max-width: 1120px; margin: 0 auto; padding: 72px 0 0; }
+  .nur-seo__row { display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; padding: 56px 0; border-top: 1px solid #E4DFD5; }
+  .nur-seo__row:first-child { border-top: 0; padding-top: 0; }
+  .nur-seo__label { align-self: start; }
+  .nur-seo__idx { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #C8A96E; margin-bottom: 14px; }
+  .nur-seo h2 { font-size: 26px; font-weight: 500; line-height: 1.25; letter-spacing: -0.3px; margin: 0; color: #1A1A1A; }
+  .nur-seo h3 { font-size: 15px; font-weight: 700; line-height: 1.4; margin: 0 0 6px; color: #1A1A1A; }
+  .nur-seo p, .nur-seo dd { font-size: 15px; line-height: 1.75; color: #4A4A4A; }
+  .nur-seo p { margin: 0 0 14px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  .nur-seo p:last-child { margin-bottom: 0; }
+  .nur-seo a { color: #1A1A1A; text-decoration: underline; text-underline-offset: 3px; }
+  .nur-seo__lead { font-size: 17px !important; line-height: 1.7 !important; color: #1A1A1A !important; }
+  .nur-seo__note { font-size: 13px !important; color: #8A8A8A !important; margin-top: 24px !important; }
+  /* Skincoach cards: three equal columns inside the text column */
+  .nur-seo__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
+  .nur-seo__card-img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 16px; }
+  .nur-seo__card h3 { min-height: 42px; }
+  .nur-seo__card p { font-size: 14px; line-height: 1.65; text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+  .nur-seo__num { display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px; color: #C8A96E; margin-bottom: 8px; }
+  /* Wavelengths: aligned two-column list */
+  .nur-seo__waves { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; margin-top: 28px; }
+  .nur-seo__wave { display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 16px; align-items: start; }
+  .nur-seo__dot { width: 28px; height: 28px; border-radius: 50%; margin-top: 1px; }
+  .nur-seo__wave h3 { font-size: 14px; margin-bottom: 4px; }
+  .nur-seo__wave p { font-size: 14px; line-height: 1.6; text-align: left; }
+  /* Session: numbered two-column list */
+  .nur-seo__steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .nur-seo__step { display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 16px; }
+  .nur-seo__step .nur-seo__num { margin: 2px 0 0; }
+  .nur-seo__step p { font-size: 14px; line-height: 1.6; text-align: left; }
+  /* Specs: one clean table */
+  .nur-seo__specs { margin: 0; }
+  .nur-seo__spec { display: grid; grid-template-columns: 170px minmax(0, 1fr); column-gap: 24px; padding: 14px 0; border-bottom: 1px solid #ECEAE5; }
+  .nur-seo__spec:first-child { padding-top: 0; }
+  .nur-seo__spec dt { font-size: 13px; font-weight: 700; color: #1A1A1A; letter-spacing: .2px; }
+  .nur-seo__spec dd { margin: 0; font-size: 14px; line-height: 1.6; }
+  .nur-seo__stars { color: #C8A96E; letter-spacing: 3px; font-size: 15px; display: block; margin-bottom: 12px; }
+  /* FAQ accordion */
+  .nur-seo__faq-item { border-bottom: 1px solid #ECEAE5; }
+  .nur-seo__faq-item:first-child summary { padding-top: 0; }
+  .nur-seo__faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 20px 0; cursor: pointer; }
+  .nur-seo__faq-item summary::-webkit-details-marker { display: none; }
+  .nur-seo__faq-item summary h3 { margin: 0; font-size: 15px; font-weight: 600; }
+  .nur-seo__plus { position: relative; flex: 0 0 14px; width: 14px; height: 14px; }
+  .nur-seo__plus::before, .nur-seo__plus::after { content: ''; position: absolute; background: #1A1A1A; left: 0; top: 6px; width: 14px; height: 1.5px; transition: transform .25s ease; }
+  .nur-seo__plus::after { transform: rotate(90deg); }
+  .nur-seo__faq-item[open] .nur-seo__plus::after { transform: rotate(0deg); }
+  .nur-seo__faq-item p { margin: 0 0 22px; font-size: 14.5px; }
+  /* Reserve band */
+  /* Reserve: 50/50 split, photo left, content vertically centred against it */
+  .nur-seo__reserve { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 80px; align-items: center; padding: 56px 0 112px; border-top: 1px solid #E4DFD5; }
+  .nur-seo__reserve-img { display: block; width: 100%; height: auto; aspect-ratio: 1229 / 1280; object-fit: cover; }
+  .nur-seo__reserve-body { max-width: 440px; }
+  .nur-seo__reserve h2 { font-size: 34px; line-height: 1.15; margin-bottom: 26px; }
+  .nur-seo__price { display: block; font-size: 24px; font-weight: 500; letter-spacing: -0.2px; color: #1A1A1A; margin-bottom: 8px; }
+  .nur-seo__reserve p { color: #4A4A4A; margin-bottom: 30px; text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+  .nur-seo__cta { display: block; width: 100%; padding: 18px 24px; background: #1A1A1A; color: #FFFFFF !important; border: 0; font-family: inherit; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-align: center; text-decoration: none !important; cursor: pointer; transition: background .25s ease, color .25s ease; }
+  .nur-seo__cta:hover { background: #C8A96E; color: #1A1A1A !important; }
+  .nur-seo__klarna { display: block; margin-top: 12px; font-size: 13px; color: #8A8A8A; text-align: center; }
+  .nur-seo__assure { list-style: none; margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid #E4DFD5; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .nur-seo__assure li { font-size: 12px; line-height: 1.45; letter-spacing: .3px; color: #4A4A4A; }
+  .nur-seo__assure strong { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: #C8A96E; margin-bottom: 4px; }
+  @media (max-width: 1099px) {
+    .nur-seo__row { grid-template-columns: 240px minmax(0, 1fr); column-gap: 48px; }
+    .nur-seo__reserve { column-gap: 48px; }
+  }
+  @media (max-width: 899px) {
+    .nur-seo { padding-top: 48px; }
+    .nur-seo__row, .nur-seo__reserve { grid-template-columns: 1fr; row-gap: 20px; padding: 40px 0; }
+    .nur-seo__reserve { row-gap: 32px; }
+    .nur-seo__reserve-body { max-width: none; }
+    .nur-seo__reserve { padding: 40px 0 64px; }
+    .nur-seo__reserve h2 { font-size: 26px; }
+    .nur-seo h2 { font-size: 22px; }
+    .nur-seo p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+    .nur-seo__cards { grid-template-columns: 1fr; gap: 32px; }
+    .nur-seo__card h3 { min-height: 0; }
+    .nur-seo__waves, .nur-seo__steps { grid-template-columns: 1fr; gap: 20px; }
+    .nur-seo__spec { grid-template-columns: 120px minmax(0, 1fr); }
+  }
+</style>
