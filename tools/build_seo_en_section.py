@@ -117,18 +117,21 @@ liq = """{%- liquid
   .nur-seo__faq-item[open] .nur-seo__plus::after { transform: rotate(0deg); }
   .nur-seo__faq-item p { margin: 0 0 22px; font-size: 14.5px; }
   /* Reserve band */
-  .nur-seo__reserve { margin-top: 16px; background: #1A1A1A; padding: 56px 64px; display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; align-items: center; }
-  .nur-seo__reserve h2 { color: #FFFFFF; }
-  .nur-seo__reserve p { color: #CFCAC0; margin-bottom: 22px; }
-  .nur-seo__cta { display: inline-block; padding: 16px 34px; background: #C8A96E; color: #1A1A1A !important; border: 0; font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none !important; cursor: pointer; }
-  .nur-seo__cta:hover { background: #D6BC88; }
+  /* Reserve: full-bleed cream band (box-shadow + clip-path bleed, no horizontal scroll), same grid as the rows */
+  .nur-seo__reserve { position: relative; margin-top: 24px; padding: 96px 0 104px; display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: 72px; align-items: start; background: #F5EFE4; box-shadow: 0 0 0 100vmax #F5EFE4; clip-path: inset(0 -100vmax); }
+  .nur-seo__reserve h2 { font-size: 30px; }
+  .nur-seo__reserve p { color: #4A4A4A; margin-bottom: 28px; max-width: 560px; text-align: left; }
+  .nur-seo__price { display: block; font-size: 22px; font-weight: 500; letter-spacing: -0.2px; color: #1A1A1A; margin-bottom: 10px; }
+  .nur-seo__cta { display: inline-block; padding: 17px 40px; background: #1A1A1A; color: #FFFFFF !important; border: 0; font-family: inherit; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none !important; cursor: pointer; transition: background .25s ease; }
+  .nur-seo__cta:hover { background: #C8A96E; color: #1A1A1A !important; }
   @media (max-width: 1099px) {
     .nur-seo__row, .nur-seo__reserve { grid-template-columns: 240px minmax(0, 1fr); column-gap: 48px; }
   }
   @media (max-width: 899px) {
     .nur-seo { padding-top: 48px; }
     .nur-seo__row, .nur-seo__reserve { grid-template-columns: 1fr; row-gap: 20px; padding: 40px 0; }
-    .nur-seo__reserve { padding: 40px 24px; }
+    .nur-seo__reserve { padding: 56px 0 64px; }
+    .nur-seo__reserve h2 { font-size: 24px; }
     .nur-seo h2 { font-size: 22px; }
     .nur-seo p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
     .nur-seo__cards { grid-template-columns: 1fr; gap: 32px; }
@@ -224,9 +227,10 @@ liq = """{%- liquid
   </section>
 
   <section class="nur-seo__reserve">
-    <h2>Reserve NŪR Protocol</h2>
+    <div class="nur-seo__label"><span class="nur-seo__idx">09 — Reserve</span><h2>Reserve NŪR Protocol</h2></div>
     <div>
-      <p>{{ nur_price | money_without_trailing_zeros }}{% if nur_klarna %}, or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna at checkout{% endif %}. The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.</p>
+      <span class="nur-seo__price">{{ nur_price | money_without_trailing_zeros }}{% if nur_klarna %} <span style="font-size:15px;color:#4A4A4A;font-weight:400;">or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna</span>{% endif %}</span>
+      <p>The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.</p>
       <button type="button" class="nur-seo__cta" onclick="var b=document.querySelector('.buy-buttons-block')||document.querySelector('product-form-component');if(b){b.scrollIntoView({behavior:'smooth',block:'center'});}">Reserve NŪR Protocol</button>
     </div>
   </section>
