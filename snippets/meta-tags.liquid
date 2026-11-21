@@ -115,6 +115,27 @@
   {%- unless page_title contains shop.name or page_title contains 'NŪR Protocol' %} &ndash; {{ shop.name }}{% endunless -%}
 </title>
 
+{%- comment -%}
+  Keep thin utility pages out of Google's index (SEO audit 2026-11-21): the
+  default "frontpage" collection, the blog while it has no articles, and the
+  privacy-choices page. "follow" keeps their links crawlable.
+{%- endcomment -%}
+{%- liquid
+  assign nur_noindex = false
+  if collection and collection.handle == 'frontpage'
+    assign nur_noindex = true
+  endif
+  if request.page_type == 'blog' and blog.articles_count == 0
+    assign nur_noindex = true
+  endif
+  if page and page.handle == 'data-sharing-opt-out'
+    assign nur_noindex = true
+  endif
+-%}
+{%- if nur_noindex -%}
+  <meta name="robots" content="noindex, follow">
+{%- endif -%}
+
 <link
   rel="canonical"
   href="{{ canonical_url }}"
