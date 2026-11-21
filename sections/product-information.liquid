@@ -1,7 +1,80 @@
 
 
+{%- comment -%}
+  Hand-written Product JSON-LD (replaces `structured_data`) so the offer can
+  carry shippingDetails and hasMerchantReturnPolicy, which Search Console
+  flagged as missing on 2026-11-21. Rates mirror Settings > Shipping:
+  FR free (Standard, orders >= EUR 65), rest of EU EUR 22, UAE/US/CH/GB/NO and
+  OM/SA/QA/EG free express. Delivery "up to 2 weeks" = 1-4 handling days +
+  3-10 transit days. Returns: 14 days, by mail, return shipping paid by the
+  customer (refund policy). Update this block if shipping or returns change.
+{%- endcomment -%}
+{%- liquid
+  assign nur_p = closest.product
+  assign nur_v = nur_p.selected_or_first_available_variant
+-%}
 <script type="application/ld+json">
-  {{ closest.product | structured_data }}
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": {{ canonical_url | append: '#product' | json }},
+  "name": {{ nur_p.title | json }},
+  "url": {{ canonical_url | json }},
+  "description": {{ nur_p.description | strip_html | strip_newlines | truncate: 5000 | json }},
+  "image": [
+    {%- for img in nur_p.images limit: 10 -%}
+      {{ img | image_url: width: 1920 | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  "brand": { "@type": "Brand", "name": "NŪR Protocol" },
+  {%- if nur_v.sku != blank %}
+  "sku": {{ nur_v.sku | json }},
+  "mpn": {{ nur_v.sku | json }},
+  {%- endif %}
+  "offers": {
+    "@type": "Offer",
+    "url": {{ canonical_url | json }},
+    "price": {{ nur_v.price | divided_by: 100.0 | json }},
+    "priceCurrency": {{ cart.currency.iso_code | json }},
+    "availability": "{% if nur_v.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@id": {{ request.origin | append: '/#organization' | json }} },
+    "shippingDetails": [
+      {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": 0, "currency": "EUR" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR"] },
+        "deliveryTime": { "@type": "ShippingDeliveryTime",
+          "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4, "unitCode": "DAY" },
+          "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 10, "unitCode": "DAY" } }
+      },
+      {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": 22, "currency": "EUR" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["AT", "BE", "BG", "HR", "CY", "CZ", "DE", "DK", "EE", "FI", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE"] },
+        "deliveryTime": { "@type": "ShippingDeliveryTime",
+          "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4, "unitCode": "DAY" },
+          "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 10, "unitCode": "DAY" } }
+      },
+      {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": 0, "currency": "USD" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["AE", "US", "CH", "GB", "NO", "OM", "SA", "QA", "EG"] },
+        "deliveryTime": { "@type": "ShippingDeliveryTime",
+          "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4, "unitCode": "DAY" },
+          "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 10, "unitCode": "DAY" } }
+      }
+    ],
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": ["FR", "AT", "BE", "BG", "HR", "CY", "CZ", "DE", "DK", "EE", "FI", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "AE", "US", "CH", "GB", "NO", "OM", "SA", "QA", "EG"],
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 14,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    }
+  }
+}
 </script>
 
 {% capture media_gallery %}
