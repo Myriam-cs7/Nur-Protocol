@@ -111,7 +111,8 @@
   {{ page_title }}
   {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
   {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- comment -%} Skip the brand suffix when the title already names the brand, also with the macron spelling (NŪR) that shop.name ("Nur Protocol") does not match. {%- endcomment -%}
+  {%- unless page_title contains shop.name or page_title contains 'NŪR Protocol' %} &ndash; {{ shop.name }}{% endunless -%}
 </title>
 
 <link
