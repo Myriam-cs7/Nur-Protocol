@@ -100,7 +100,7 @@ EN = {
     'test_p1': 'Twelve testers rated NŪR Protocol 4.6/5. Their unedited reviews are on the <a href="/pages/reviews">NŪR Protocol tester reviews page</a>.',
     'test_p2': "The product gallery above shows before and after photos from real testers: eye area and fine lines, pigmentation, tone and texture. Same light, same angle, written consent, no retouching beyond exposure correction. They document individual results, not a guarantee. More photos, and how they were taken, in our <a href=\"/blogs/news/led-face-mask-before-and-after\">before and after article</a>.",
     'deliv_idx': "Delivery", 'deliv_h2': "Delivery and support in the United Arab Emirates",
-    'deliv_p1': "NŪR Protocol ships worldwide. For the United Arab Emirates, delivery takes up to 2 weeks and shipping is free; the total is confirmed at checkout. Every order ships with tracking.",
+    'deliv_p1': "NŪR Protocol ships worldwide. For the United Arab Emirates, delivery is within 2 weeks and shipping is free; the total is confirmed at checkout. Every order ships with tracking.",
     'deliv_p2': 'Orders, questions about your routine and returns go through the <a href="/pages/contact">NŪR Protocol contact page</a>, with individual replies. Returns are accepted within 14 days of delivery, as set out in the <a href="/policies/refund-policy">refund policy</a>. Warranty: 2 years.',
     'faq_idx': "Questions",
     'res_alt': "Woman holding a Nur Protocol LED face mask glowing red",
@@ -108,7 +108,7 @@ EN = {
     'res_p': "The set holds the face mask, the neck panel, the controller, the eye protectors and NŪR Skincoach.",
     'res_cta': "Reserve NŪR Protocol",
     'res_klarna': "or 3 × {{ nur_third | money_without_trailing_zeros }} with Klarna at checkout",
-    'as1': ("Warranty", "2 years"), 'as2': ("Delivery", "Up to 2 weeks, tracked"), 'as3': ("Included", "NŪR Skincoach"),
+    'as1': ("Warranty", "2 years"), 'as2': ("Delivery", "Within 2 weeks, tracked"), 'as3': ("Included", "NŪR Skincoach"),
 }
 
 FR = {
@@ -179,7 +179,7 @@ FR = {
     'test_p1': 'Douze personnes ont testé NŪR Protocol et lui ont donné 4,6/5. Leurs avis, non retouchés, sont sur la <a href="{{ nur_root }}/pages/reviews">page des avis des testeurs NŪR Protocol</a>.',
     'test_p2': f"La galerie produit, plus haut, montre des photos avant/après de vrais testeurs{NB}: contour des yeux et ridules, pigmentation, teint et texture. Même lumière, même angle, consentement écrit, aucune retouche au-delà de la correction d’exposition. Elles montrent des résultats individuels, pas une garantie. Toutes les photos, et la façon dont elles ont été prises, sont dans notre <a href=\"{{{{ nur_root }}}}/blogs/news/masque-led-visage-avant-apres\">article avant/après</a>.",
     'deliv_idx': "Livraison", 'deliv_h2': "Livraison en France et en Europe",
-    'deliv_p1': f"NŪR Protocol est livré en France, dans toute l’Union européenne, en Suisse, au Royaume-Uni et en Norvège, en 2 semaines maximum, avec suivi. La livraison est offerte en France, en Suisse, au Royaume-Uni et en Norvège{NB}; elle coûte 22 € vers les autres pays de l’Union européenne. Le total est confirmé au moment du paiement.",
+    'deliv_p1': f"NŪR Protocol est livré en France, dans toute l’Union européenne, en Suisse, au Royaume-Uni et en Norvège, sous 2 semaines, avec suivi. La livraison est offerte en France, en Suisse, au Royaume-Uni et en Norvège{NB}; elle coûte 22 € vers les autres pays de l’Union européenne. Le total est confirmé au moment du paiement.",
     'deliv_p2': f'Commandes, questions sur votre routine et retours passent par la <a href="{{{{ nur_root }}}}/pages/contact">page contact NŪR Protocol</a>, avec une réponse personnelle. Les retours sont acceptés sous 14 jours après la livraison, comme le prévoit la <a href="{{{{ nur_root }}}}/policies/refund-policy">politique de remboursement</a>. Garantie{NB}: 2 ans.',
     'faq_idx': "Questions",
     'res_alt': "Femme tenant un masque LED Nur Protocol allumé en rouge",
@@ -187,7 +187,7 @@ FR = {
     'res_p': "Le coffret réunit le masque visage, le panneau cou, la télécommande, les protections oculaires et NŪR Skincoach.",
     'res_cta': "Réserver NŪR Protocol",
     'res_klarna': "ou 3 × {{ nur_third | money_without_trailing_zeros }} avec Klarna au paiement",
-    'as1': ("Garantie", "2 ans"), 'as2': ("Livraison", "2 semaines max., avec suivi"), 'as3': ("Inclus", "NŪR Skincoach"),
+    'as1': ("Garantie", "2 ans"), 'as2': ("Livraison", "Sous 2 semaines, avec suivi"), 'as3': ("Inclus", "NŪR Skincoach"),
 }
 
 
